@@ -70,7 +70,7 @@ function showAllGameList() {
 		</script>
 	
 
-
+@@@@@@@@@@!@!@!@!@
 
 <script type="text/javascript">
 	var G_ROOFTOP_BANNER_COOKIE_POSTFIX = 'promotionRooftop'
