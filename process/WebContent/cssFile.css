@@ -1,0 +1,436 @@
+@charset "euc-kr";
+
+/* @font-face {
+    font-family:ng;
+    font-weight:normal;
+    src:url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.eot);
+    src:url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
+        url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.woff) format('woff'),
+        url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.ttf) format('truetype');
+} */
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+html{overflow:auto}/* 플로팅 배너 관련 레이아웃 */
+body{overflow:hidden;position:relative;min-width:1100px}/* 플로팅 배너 관련 레이아웃 */
+body,input,textarea,select,button,table{font-family:'나눔고딕','NanumGothic',ng,'돋움',Dotum,'Apple SD Gothic Neo',sans-serif;font-size:12px;color:#333}
+fieldset,img,button{border:0 none;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
+address,caption{font-style:normal;font-weight:normal}
+em{font-style:normal}
+dl,ul,ol,li{list-style:none}
+a{color:#000;text-decoration:none;*cursor:pointer}
+button{overflow:visible;border:0;background:transparent;cursor:pointer;box-sizing:content-box}
+button::-moz-focus-inner{padding:0;border:0}
+input[type='text'],input[type='password']{border:0;background:transparent;vertical-align:top;outline:none}
+input[type='checkbox'],input[type='radio']{border:none;-webkit-appearance:none;appearance:none;background:transparent;vertical-align:top}
+input[type=text]::-ms-clear{display:none}
+input{-webkit-appearance:none;appearance:none}
+hr{display:none}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+#skip{height:0}
+#skip a{display:block;position:absolute;left:0;top:-100px;width:100%;height:25px;text-align:center}
+#skip a:focus,#skip a:active{position:absolute;top:0;z-index:210;padding:10px 0;background:#fa6400;font-weight:bold;color:#fff;font-size:20px;text-decoration:none}
+
+/* sprite common */
+.logo_bugs,.logo_ticketlink,.logo_comico,.ico_paging,.login_set .checkbox-mark,.login_payco_txt,.ico_remove,.online_tit,.mobile_tit,.tag_popular,.tag_new,.tag_recommend,.ico_nav,.ico_nav_prev,.ico_nav_next,
+.service_tit,.ico_more,.ico_special_close,
+.game_online_tit,.game_mobile_tit,.ico_birth_bubble,.ico_paycoid_bubble,.ico_guide_close,.ico_new,.ico_adult,
+.ico_pc,.ico_aos,.ico_ios,.ico_all,.login_google_txt,.login_facebook_txt,.ico_mobile,.pop_btn_close,.ico_event
+{display:inline-block;overflow:hidden;
+/* ♥♥♥  LOGO ♥♥♥*/
+background:url(https://hangame-images.toastoven.net/hangame/nhn2019/sp.png) no-repeat;
+/* ♥♥♥  LOGO ♥♥♥*/
+font-size:1px;line-height:999px;vertical-align:top} /* sprite image 공통 스타일 */
+
+/* tags */
+.tag_popular,.tag_new,.tag_recommend{width:36px;height:22px;position:absolute;top:-6px;left:-4px;z-index:30}
+.tag_popular{background-position:-142px -84px}
+.tag_new{background-position:-142px -108px}
+.tag_recommend{left:-6px;background-position:-142px -132px}
+
+/* layout */
+.wrap{min-width:1100px;background-repeat:no-repeat;background-position:50% 0;background-color:#eef3f6}
+.contents{position:relative;width:1080px;margin:0 auto;padding:0 0 47px;outline:0; margin-top: 75px;}
+.inner{position:relative;width:1080px;height:100%;margin:0 auto;*zoom:1}
+.inner:after{display:block;clear:both;content:''}
+
+/* header_main */
+/* .header_main{position:relative;z-index:200;height:108px} */
+.header_main_side_l{display:inline-block;*display:inline;vertical-align:top;*zoom:1}
+.header_main_side_r{position:absolute;top:0;right:0;height:100%;font-size:0}
+.hangame_tit{display:inline-block;*display:inline;margin:37px 0 0 -1px;vertical-align:top;*zoom:1}
+.hangame_link{display:inline-block;vertical-align:top}
+.logo_hangame{width:211px;height:30px;background-position:0 0; }
+.service{margin:35px 0 0 49px;font-size:0}
+.service_menu{display:inline-block;height:15px;margin-left:10px;padding:9px;font-size:14px;color:#333;letter-spacing:-1px;vertical-align:top;line-height:15px}
+button.service_menu{*height:33px}
+.service_menu:first-child{margin-left:0}
+.ico_new{width:17px;height:19px;margin:-5px 3px 0 0;background-position:-56px -69px;vertical-align:middle}
+.family{margin:35px -6px 0 0;font-size:0}
+.family_link{display:inline-block;margin-left:1px;padding:8px 7px;line-height:0;vertical-align:middle}
+.logo_bugs{width:42px;height:16px;margin-top:2px;background-position:0 -104px}
+.logo_ticketlink{width:48px;height:18px;margin-top:2px;background-position:0 -84px}
+.logo_comico{width:54px;height:13px;margin-top:-1px;background-position:0 -69px}
+
+/* header_main 밝은 버전 */
+.header_main_light .logo_hangame{background-position:0 -200px}
+.header_main_light .service_menu{color:#fff}
+.header_main_light .logo_bugs{background-position:0 -182px}
+.header_main_light .logo_ticketlink{background-position:0 -162px}
+.header_main_light .logo_comico{background-position:0 -147px}
+
+/* spot layout */
+.spot_section{position:relative}
+.spot_row{margin-top:11px;*zoom:1}
+.spot_row:first-child{margin-top:0}
+.spot_row:after{display:block;clear:both;content:''}
+.spot_col{float:left;margin-left:11px}
+.spot_col:first-child{margin-left:0}
+.spot_col_third{margin-left:10px}
+
+/* special banner */
+.special_banner{position:absolute;top:0;left:0;z-index:10}
+.special_banner_link{display:block;width:807px}
+.special_banner_img{width:100%;height:auto}
+.special_close_area{position:absolute;right:0;bottom:0;*zoom:1}
+.special_close_area:after{display:block;clear:both;content:''}
+.special_close_btn{float:left;margin-left:1px;padding:13px 12px 12px 13px;background:url(https://hangame-images.toastoven.net/hangame/main2016/bg_special_close.png)}
+.special_close_btn:first-child{margin-left:0}
+.special_close_txt{position:relative;padding:0 3px;font-size:12px;color:rgb(255,255,255)\0;color:rgba(255,255,255,0.75);*color:rgb(255,255,255);line-height:17px}
+.ico_special_close{position:relative;width:17px;height:17px;background-position:-92px -131px}
+
+/* top banner */
+.gnb_bar{position:relative;z-index:250}
+.gnb_bar .close_btn, .gnb_bar .open_btn{overflow:hidden;position:absolute;top:0;right:0;width:50px;height:50px;margin-right:30px;background:url(https://hangame-images.toastoven.net/hangame/www/201802/bg_bnr_btn.png) no-repeat;line-height:999px;z-index:250}
+.gnb_bar .close_btn{background-position:0 -52px}
+.gnb_bar .open_btn{top:0;background-position:0 0}
+.gnb_bnr_area{position:relative;top:0;left:0;right:0;width:100%;min-width:1080px}
+.gnb_bnr_area .gnb_bnr{position:relative;height:80px;background-color:#2a3a67;background-repeat:no-repeat;background-position:50% 0;z-index:210}
+.gnb_bnr_area .gnb_bnr a{display:block;height:80px;text-align:center}
+.gnb_bnr_area .gnb_bnr img{width:100%;min-width:1080px}
+
+/* rolling */
+.rolling{position:relative}
+.rolling_box{overflow:hidden;position:relative;width:262px;height:291px}
+.rolling_lst{font-size:0;white-space:nowrap}
+.rolling_item{display:inline-block;position:relative;width:262px;height:291px;*display:inline;*zoom:1}
+.rolling_link{display:block}
+.rolling_img{width:100%;height:auto;font-size:1px;vertical-align:bottom}
+.rolling_shadow{position:absolute;bottom:0;left:0;width:100%;height:65px;background:url(https://hangame-images.toastoven.net/hangame/main2016/bg_shadow_rolling.png) 0 100% repeat-x}
+.paging_lst{position:absolute;bottom:15px;*bottom:13px;left:23px;*zoom:1}
+.paging_lst:after{display:block;clear:both;content:''}
+.paging_item{float:left}
+.paging_btn{padding:2px 1px 2px 2px;line-height:16px}/* 크롬 focus시 outline 모양 관련 line-height 추가 */
+.ico_paging{position:relative;width:16px;height:16px;background-position:-92px -113px}
+.paging_item.is_active .ico_paging{background-position:-110px -113px}
+.wide_type{margin-top:-39px}
+.wide_type .rolling_box{width:534px;height:330px}
+.wide_type .rolling_item{width:534px;height:inherit}
+.wide_type .paging_lst{left:30px}
+
+/* mygame */
+.mygame{overflow:hidden;position:relative;width:534px;height:291px;background:url(https://hangame-images.toastoven.net/hangame/main2016/2017/bg_mygame.jpg) no-repeat}
+.mygame_bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.mygame_bg_img{width:100%;height:auto}
+.mygame_cont{position:relative;z-index:10;padding:24px 0 0 50px}
+.mygame_txt{color:#fff;letter-spacing:-1px;*zoom:1}
+.mygame_txt:after{display:block;clear:both;content:''}
+.mygame_tit{float:left;font-size:15px;font-weight:normal;line-height:20px}
+.mygame_dsc{float:left;margin:4px 0 0 10px;font-size:11px;color:#889aad;line-height:14px}
+.mygame_nick{color:#889aad}
+.mygame_nick:hover,.mygame_nick:focus{text-decoration:underline}
+.mygame_lst{margin-top:9px;*zoom:1}
+.mygame_lst:after{display:block;clear:both;content:''}
+.mygame_item{position:relative;float:left;width:118px}
+.mygame_link{display:block;position:relative;color:#fff}
+.mygame_card{display:block;overflow:hidden;height:79px;border:1px solid #252525}
+.mygame_img{position:absolute;top:1px;left:0;right:0;width:100%}
+.mygame_name{display:block;overflow:hidden;height:29px;margin-top:7px;font-size:13px;line-height:14px}
+.mygame_remove_btn{position:absolute;top:0;right:0;z-index:-1;padding:4px;background:#252525;font-size:0}
+.mygame_item:hover .mygame_remove_btn,.mygame_item.is_focus .mygame_remove_btn{z-index:10}
+.ico_remove{position:relative;width:9px;height:9px;background-position:-116px -84px}
+.mygame_item:first-child{width:288px;margin-right:28px}
+.mygame_item:first-child .mygame_card{height:196px}
+.mygame_none .mygame_card{background-color:#7f848d}
+.mygame_none .mygame_item:first-child .mygame_card{background-image:url(https://hangame-images.toastoven.net/hangame/main2016/2017/bg_nogame_recent.jpg)}
+
+/* move banner */
+.move_banner{width:807px;height:291px}
+.move_banner_img{width:100%}
+
+/* member */
+.member{position:relative;width:216px;height:258px;padding:10px 23px 23px;background:#fff}
+.notice{position:relative;border-bottom:1px solid #dadddf}
+.notice_cont{overflow:hidden;height:28px; margin-top:8px; margin-bottom:2px}
+.notice_tit_link{margin-right:20px;color:#333;line-height:37px}
+.notice_link{float:left;overflow:hidden;width:188px;color:#666;letter-spacing:-1px;line-height:37px;white-space:nowrap;text-overflow:ellipsis}
+.notice_link:hover,.notice_link:focus{text-decoration:underline}
+.login{padding-top:15px}
+.login_set{height:14px;margin-bottom:9px;padding-left:2px;line-height:0}
+.login_set .checkbox-applied{display:inline-block;overflow:hidden;position:relative;width:12px;height:12px;border:1px solid #e2e2e2;border-top-color:#c9cacb;vertical-align:middle}
+.login_set .checkbox-mark{display:none;position:absolute;top:0;right:-1px;width:12px;height:9px;background-position:-124px -131px}
+.login_set .checkbox-checked{display:block}
+.login_set .chk_inp{position:absolute;top:0;left:-999px;width:1px;height:1px}
+.login_set .chk_label{display:inline-block;position:relative;margin-left:1px;*margin-left:5px;padding-top:1px;font-size:11px;color:#888;line-height:13px;vertical-align:top;cursor:pointer}
+.login_form{position:relative;padding-right:66px}
+.login_form .input_form{height:65px}
+.login_form .flash_area{height:100%}
+.login_form_item{height:31px;padding:0 10px;border:1px solid #dadddf;border-right-width:0;vertical-align:middle}
+.login_form_item:first-child{border-bottom:0}
+.input_id{background-position:10px 0;*background-position:11px 1px}
+.input_pw{background-position:10px -33px;*background-position:11px -32px}
+.input_writeafter{background-image:none}
+.input_mouseover{background-image:none;background-color:#f6f7fd}
+.login_form_item .txt_inp{width:130px;height:20px;margin-top:5px;font-size:13px;color:#212121;line-height:20px;vertical-align:top}
+.login_btn{position:absolute;top:0;right:0;width:66px;height:65px;background:#96999f;line-height:65px;font-size:14px;color:#fff;text-align:center}
+.login_btn.is_disabled{cursor:default}
+.login_easy{position:absolute;right:0;bottom:0;left:0;padding:14px 23px 23px}
+.login_easy a:hover,.login_easy:focus{text-decoration:none}
+.login_payco_link{display:block;height:38px;border:1px solid #fa2828;background-color:#fff;text-align:center}
+.login_payco_txt{width:101px;height:15px;margin:11px 0 0 3px;background-position:-92px -68px}
+.other_login_area{margin-top:4px}
+.other_login_area .btn_login_link{float:left;width:104px;height:29px;margin-left:4px;border:1px solid #ccc;text-align:center}
+.other_login_area .btn_login_link:first-child{margin-left:0}
+.btn_login_link .login_google_txt{width:64px;height:20px;margin-top:5px;background-position:0 -232px}
+.btn_login_link .login_facebook_txt{width:84px;height:20px;margin-top:5px;background-position:-66px -232px}
+.login_easy{overflow:hidden;position:absolute;right:0;bottom:0;left:0;padding:0 23px 23px}
+.login_easy .btn_other{float:left;height:40px;margin-left:3px;background-image:url(https://hangame-images.toastoven.net/hangame/main2016/2017/sp_etc_login.png);background-repeat:no-repeat}
+.login_easy .btn_login_payco{width:130px;margin-left:0;background-position:0 0}
+.login_easy .btn_login_gg{width:40px;background-position:-133px 0}
+.login_easy .btn_login_fb{width:40px;background-position:-176px 0}
+.login_help{padding-top:10px;font-size:11px;color:#555;letter-spacing:-1px;line-height:16px;*zoom:1}
+.login_help:after{display:block;clear:both;content:''}
+.mem_id_search{margin-left:7px}
+.mem_id_search,.mem_pw_search,.mem_join{float:left}
+.login_help_link{color:#555}
+.login_help_txt{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px}
+.login_help_slash{float:left;margin:0 4px}
+.login_help_bar{float:left;width:1px;height:8px;margin:4px 10px 0 10px;background:#dfdfdf;vertical-align:top}
+.myinfo{padding-top:22px}
+.myinfo_header_main{*zoom:1}
+.myinfo_header_main:after{display:block;clear:both;content:''}
+.myinfo_name{float:left;position:relative}
+.myinfo_name_link{font-size:17px;color:#000}
+.myinfo_name_link:hover,.myinfo_name_link:focus{text-decoration:underline}
+.myinfo_name_txt{margin-left:2px;font-size:11px;color:#848484}
+.myinfo_logout_btn{float:right;*height:22px}
+.myinfo_logout_txt,.myinfo_hcoin_txt{display:block;position:relative;width:50px;padding:4px 0 3px;*padding:5px 0 2px;padding:6px 0 1px\0;border:1px solid #dedede;font-family:'돋움',Dotum,sans-serif;font-size:11px;color:#848484;letter-spacing:-1px;line-height:13px;text-align:center}
+.myinfo_detail{margin-top:7px;padding-top:18px;border-top:1px solid #ececec}
+.myinfo_detail_lst{*zoom:1}
+.myinfo_detail_lst:after{display:block;clear:both;content:''}
+.myinfo_detail_item{float:left;position:relative;width:100%;font-size:12px}
+.myinfo_detail_item.half_type{width:99px}
+.myinfo_detail_item.has_bar{width:97px;padding-left:20px}
+.myinfo.is_paycoid_bubble .myinfo_detail{margin-top:7px;padding-top:0;border-top:0}
+.myinfo_category{font-size:13px;color:#777;line-height:26px}
+.myinfo_category:hover,.myinfo_category:focus{text-decoration:underline}
+.myinfo_data{position:absolute;top:5px;right:0;text-align:right}
+.myinfo_value{margin-right:2px;font-weight:bold;font-size:14px;color:#000}
+.myinfo_value.chk_count{color:#f91314}
+.myinfo_value.chk_count.zr{font-weight:normal;color:#000}
+.myinfo_value:hover,.myinfo_value:focus{text-decoration:underline}
+.myinfo_value_txt{color:#848484}
+.myinfo_bar{position:absolute;top:8px;left:9px;width:1px;height:10px;background:#ddd}
+.myinfo_access_area{margin-top:16px}
+.myinfo_access_data{font-size:11px;color:#9d9d9d;line-height:17px}
+.myinfo_link_area{position:relative;margin-top:25px;*zoom:1}
+.myinfo.is_paycoid_bubble .myinfo_link_area{position:relative;margin-top:14px}
+.myinfo.is_paycoid_bubble .myinfo_access_area{margin-top:6px}
+.myinfo_link_area:after{display:block;clear:both;content:''}
+.myinfo_more_link,.myinfo_charge_link{display:block;float:left;position:relative;width:106px;height:40px;background:#96999f;font-size:13px;color:#fff;line-height:40px;text-align:center}
+.myinfo_charge_link{float:right;background:#fa1414;font-weight:bold}
+.ico_birth_bubble{position:absolute;bottom:23px;left:0;z-index:10;width:83px;height:23px;background-position:0 -122px}
+.ico_paycoid_bubble{width:216px;height:38px;margin-top:2px;background-image:url(https://hangame-images.toastoven.net/hangame/main2016/2017/img_paycoid_bubble.png);z-index:10}
+.guide_ly{position:absolute;top:99px;left:23px;z-index:20;width:214px;border:1px solid #96999f;background:#fff;text-align:center}
+.guide_msg_area{height:125px}
+.guide_msg{padding-top:30px;font-size:12px;color:#9d9d9d;line-height:16px}
+.guide_msg_em{display:block;margin-bottom:8px;font-size:13px;color:#494949;line-height:17px}
+.guide_select_area{border-top:1px solid #d3d3d3;background:#e6e7ea;*zoom:1}
+.guide_select_area:after{display:block;clear:both;content:''}
+.guide_select_item{float:left;width:106px;height:41px;border-left:1px solid #d3d3d3;font-weight:bold;font-size:12px;color:#494949;letter-spacing:-1px;line-height:41px}
+.guide_select_item:first-child{width:107px;border-left:0}
+.guide_close_btn{position:absolute;top:0;right:0;padding:10px 8px}
+.ico_guide_close{position:relative;width:11px;height:11px;background-position:-111px -131px}
+.ico_event{position:absolute;top:-10px;right:-4px;width:47px;height:21px;background:url(https://hangame-images.toastoven.net/hangame/www/css/ly_txt_event_20181016.gif)}
+
+/* banner */
+.banner_link{display:block;width:262px;height:187px}
+.banner_img{width:100%;height:auto}
+
+/* event_section */
+.spot_event{margin-top:30px}
+.event_link{display:block;height:80px}
+.event_img{width:100%;height:auto}
+
+/* floating banner */
+
+.floating_banner{position:absolute;top:-45px;left:50%;z-index:0;margin-left:560px}
+.floating_banner_link{display:block;width:243px;height:380px}
+.floating_banner_img{width:100%;height:auto}
+
+/* tab menu */
+.tit_box{padding:15px 0;font-size:0;text-align:center}
+.online_tit{width:107px;height:17px;background-position:-92px -32px}
+.tab_box{font-size:0;text-align:center}
+.tab{display:inline-block;*display:inline;*zoom:1}
+.tab:after{display:block;clear:both;content:''}
+.tab_item{float:left;margin-left:32px}
+.tab_item:first-child{margin-left:0}
+.tab_item.is_active .tab_link{border-bottom-color:#212121;font-weight:bold;color:#212121}
+.tab_link{display:block;padding-bottom:3px;border-bottom:2px solid transparent;font-size:14px;color:#888;line-height:16px}
+.game_section{position:relative;min-height:732px;margin-top:30px}
+.online_area{min-height:733px;border:1px solid #dde3e7;background:#fff}
+.online_box{padding:17px 56px 48px;border-top:1px solid #e9e9e9}
+.online_box .card_lst{margin:-33px 0 0 -44px}
+
+/* card list */
+.card_box{margin-top:38px}
+.card_lst{*zoom:1}
+.card_lst:after{display:block;clear:both;content:''}
+.card_item{float:left;position:relative}
+.card_item a{display:block;cursor:pointer}
+.card_item .mobile_guide{position:absolute;right:0;bottom:16px;margin:0;z-index:50}
+/*.card{overflow:hidden}*/
+.card_img_box{display:block;position:relative;z-index:10}
+.card_mask{position:absolute;top:0;left:0;z-index:20;width:100%;height:100%;background-repeat:no-repeat}
+.card_tit{overflow:hidden;display:block;margin:10px 25px 0 3px;font-size:14px;font-weight:bold;color:#212121;line-height:17px;text-overflow:ellipsis}
+.card_txt{display:block;margin:7px 0 0 3px;font-size:11px;color:#8d8d8d;line-height:13px}
+.col_type1{margin:33px 0 0 44px;width:158px}
+.col_type2{margin:21px 0 0 14px;width:78px}
+.col_type1 .card_mask{background-image:url(https://hangame-images.toastoven.net/hangame/main2016/bg_mask_line.png)}
+.col_type2 .card_mask{background-image:url(https://hangame-images.toastoven.net/hangame/main2016/bg_mask_round.png)}
+.col_type2 .card{height:117px}
+.col_type2 .card_tit{margin:9px 0 0 0;font-size:13px;font-weight:normal;letter-spacing:-1px;line-height:15px;text-align:center}
+.col_type1 .card_tit,.col_type1 .card_txt{white-space:nowrap}
+
+/* 한게임 만화, 한게임 믹스 */
+.hangame_section{padding-top:30px;*zoom:1}
+.hangame_section:after{display:block;clear:both;content:''}
+.plus_area{position:relative;min-height:360px;border:1px solid #dde3e7;background:#fff}
+.plus_area.half_type{float:left;width:531px;margin-left:14px}
+.plus_area.half_type:first-child{margin-left:0}
+.plus_area .tit_box{position:relative;height:47px;padding:0;border-bottom:1px solid #e6ebee;text-align:left}
+.tit_link{display:inline-block;padding:16px 19px}
+.comic_tit,.mix_tit{display:inline-block;*display:inline;*zoom:1}
+
+/* 한게임 만화 */
+.logo_comic{width:123px;height:15px;background-position:-92px -156px}
+.comic_box{padding:21px 27px 0 31px}
+.comic_tab_box{position:absolute;top:0;right:32px;font-size:0}
+.comic_tab{*zoom:1}
+.comic_tab:after{display:block;clear:both;content:''}
+.comic_tab_item{float:left;margin-left:20px}
+.comic_tab_item:first-child{margin-left:0}
+.comic_tab_link{display:block;padding:17px 0 14px;border-bottom:2px solid transparent;font-size:13px;color:#999;letter-spacing:-1px;line-height:15px}
+.comic_tab_item.is_active .comic_tab_link{color:#000;border-bottom-color:#12cbc7}
+.col_type3{width:104px;margin-left:19px}
+.col_type3:first-child{margin-left:0}
+.col_type3 .card_mask{background-image:url(https://hangame-images.toastoven.net/hangame/www/201707/comico/bg_mask_comic.png)}
+.col_type3 .card_tit{overflow:hidden;margin:7px 0 0 0;font-size:13px;font-weight:normal;letter-spacing:-1px;line-height:21px;text-align:center;white-space:nowrap;text-overflow:ellipsis}
+.col_type3 .card_txt{overflow:hidden;margin:1px 0 0 0;font-size:12px;color:#999ca3;text-align:center;text-overflow:ellipsis;white-space:nowrap}
+.card_adult .card_mask{background-image:url(https://hangame-images.toastoven.net/hangame/www/201707/comico/bg_mask_adult.jpg)}
+.ico_adult{width:21px;height:21px;margin-right:5px;background-position:-198px -128px;*vertical-align:middle}
+.mobile_guide{display:inline-block;margin:11px 0 0 -14px;vertical-align:top}
+.ico_mobile{width:26px;height:26px;background-position:-50px -90px}
+.mobile_guide:hover .ico_mobile,.service_link:hover .ico_mobile{background-position:-56px -147px}
+
+/* 한게임 mix */
+.logo_mix{width:124px;height:13px;background-position:-92px -173px}
+.mix_box{padding:20px 0 0 24px}
+.game_info_lst{*zoom:1;margin-left:-7px}
+.game_info_lst:after{display:block;clear:both;content:''}
+.game_info_item{    float: left;  position: relative;   width: 150px;    margin: 0 10px; }
+.game_img_link{position:absolute;top:0;left:0;width:71px;height:71px}
+.game_info {  margin: 8px 0;    text-align: center;    padding-right: 18px;}
+.game_info_tit{display:block;overflow:hidden;font-size:13px;font-weight:bold;white-space:nowrap;text-overflow:ellipsis}
+.game_info_txt{display:block;overflow:hidden;margin-top:4px;color:#999ca3;white-space:nowrap;text-overflow:ellipsis}
+.platform{font-size:0;margin:8px 0 0 2px}
+.platform_item{display:inline-block;*display:inline;*zoom:1;margin-right:3px}
+.ico_pc{width:39px;height:20px;background-position:-180px -84px}
+.ico_aos{width:20px;height:20px;background-position:-180px -106px}
+.ico_ios{width:20px;height:20px;background-position:-202px -106px}
+.btn_all{position:absolute;top:0;right:0;padding:15px 16px 16px 15px;border-left:1px solid #e6ebee}
+.ico_all{width:16px;height:16px;background-position:-180px -128px}
+
+/* mini_banner_area */
+.mini_banner_area{margin-top:30px}
+.mini_banner{display:block}
+
+/* footer */
+.bar{display:inline-block;width:1px;height:8px;background:#d0d0d0;vertical-align:middle}
+
+/* footer - 서비스 바로가기 */
+.service_section{position:relative;background:#fff}
+.service_section .inner{padding:22px 0 23px}
+.service_tit{float:left;width:87px;height:14px;background-position:-92px -51px}
+.service_lst{float:left;margin-left:34px}
+.service_lst .bar{margin:0 19px 0 23px}
+.service_item{position:relative;float:left}
+.service_link{color:#666;line-height:14px}
+.service_link:hover,.service_link:focus,.policy_link:hover,.policy_link:focus,.service_more_link:hover,.service_more_link:focus,.mail_link:hover,.mail_link:focus{text-decoration:underline}
+.service_link .ico_mobile{position:absolute;right:-31px;top:-6px}
+.service_more_link{float:right;margin-right:2px;font-size:13px;color:#666;letter-spacing:-1px;line-height:14px}
+
+/* footer - 정보 */
+.info_section{border-top:1px solid #eeeff0;background:#fff}
+.info_section .inner{position:relative;padding:26px 0 51px}
+.info_area{padding-left:122px}
+.nhnent_link{position:absolute;top:26px;left:0}
+.logo_nhn{width:91px;height:26px;background-position:0 -32px}
+.policy_lst{*zoom:1}
+.policy_lst:after{display:block;clear:both;content:''}
+.policy_item{float:left}
+.policy_item .bar{margin:-2px 12px 0 14px}
+.policy_link{color:#666;line-height:14px}
+.policy_link strong{font-weight:normal}
+
+/* 개인정보취급방침 */
+
+/* 개인정보취급방침 */
+.notice_dsc{margin-top:21px;color:#909090;line-height:18px}
+.info_lst{margin-top:13px;line-height:18px}
+.info_txt{color:#b4b4b4;line-height:16px}
+.info_txt_bar{display:inline-block;width:1px;height:8px;background:#b4b4b4;vertical-align:middle;margin:-2px 10px 0}
+.info_txt:first-child{margin-left:0}
+.mail_link,.license_link{color:#b4b4b4;border-bottom:1px solid #b4b4b4}
+.ico_more{width:3px;height:5px;margin:6px 0 0 5px;background-position:-127px -84px}
+.copyright{color:#b4b4b4;font-family:'arial','verdana',dotum,sans-serif;margin-top:17px;font-size:12px}
+.copyright_link{color:#b4b4b4}
+
+/* 회원개발팀 로그인 영역 */
+.ly_lgtxt_capslock{position:absolute;left:23px;top:153px;width:216px;height:31px;z-index:100;overflow:hidden}
+.ly_lgtxt_capslock img{width:100%;height:31px;background:url(https://hangame-images.toastoven.net/hangame/login/loginui/hancommon2011/ly_txt_capslock2.gif) 0 0 no-repeat}
+
+/* payco login bubble */
+.ico_payco_bubble{width:216px;height:33px;margin-bottom:2px;text-align:center;letter-spacing:-0.05em;line-height:27px;background-image:url(https://hangame-images.toastoven.net/hangame/main2016/2017/img_payco_bubble_201804.png)}
+.ico_payco_bubble+.login_payco_link{margin-top:2px}
+
+/* 이벤트 배너레이어 */
+.evt_pop_wrap{position:fixed;left:0;top:0;right:0;bottom:0;font-size:0;text-align:center;white-space:nowrap;z-index:200}
+.evt_pop_cont{position:relative;display:inline-block;*display:inline;width:819px;height:598px;vertical-align:middle;white-space:normal;*zoom:1}
+.pop_btn_close{position:absolute;right:57px;top:41px;width:22px;height:22px;background-position:-56px -175px}
+.align{display:inline-block;height:100%;min-height:950px;vertical-align:middle}
+
+.myinfo .ico_bir{display:block;float:left;overflow:hidden;width:81px;height:20px;margin:-2px 0 0 2px;vertical-align:top;cursor:pointer}
+.myinfo .ico_bir span{display:block;width:400px;height:700px;margin-left:-233px;background:url(https://hangame-images.toastoven.net/hangame/main/renew2012/toast/sp_bg.png) no-repeat 0 0;_background:0;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://hangame-images.toastoven.net/hangame/main/renew2012/toast/sp_bg.png',sizingMethod='crop');text-indent:-1000px}
+
+
+
+
+/* ♥ table notice*/
+#notice_table table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#notice_table td, th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+/* .notice_table tr:nth-child(even) {
+  background-color: #dddddd;
+} */
