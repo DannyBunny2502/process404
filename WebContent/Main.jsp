@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+
+
 		<meta charset="MS949">
 		<meta http-equiv="Content-Type" content="text/html; charset=MS949">
 		<title>PROCESS 404 - Group Ware (mini)</title>
@@ -32,7 +36,7 @@
 		<script language="javascript" type="text/javascript" src="jsFile.js" charset="UTF-8"></script>
 
 		
-
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 <script type="text/javascript" language="javascript">
@@ -70,7 +74,7 @@ function showAllGameList() {
 		</script>
 	
 
-
+@@@@@@@@@@!@!@!@!@
 
 <script type="text/javascript">
 	var G_ROOFTOP_BANNER_COOKIE_POSTFIX = 'promotionRooftop'
