@@ -1,0 +1,17 @@
+<Context path="/AmyProject" docBase="www">
+<Resource
+	name="jdbc/UserChat"
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="com.mysql.jdbc.Driver"
+	loginTimeout="10"
+	validationQuery="SELECT 1 FROM DUAL"
+	maxWaitMillis="-1"
+	username="root"
+	password="class01"
+	testOnBorrow="true"
+	url="jdbc:mysql://localhost:3306/UserChat?serverTimezone=UTC"/>
+<ResourceLink type="javax.sql.data.DataSource"
+	name="jdbc/UserChat"
+	global="jdbc/UserChat"/>
+</Context>
