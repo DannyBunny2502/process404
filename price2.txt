@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!--//SEO 최적화-->
+<title>서비스형, 설치형 제품유형별 가격안내-그룹웨어 PRODUCE 404</title>
+<meta property="og:title" content="서비스형, 설치형 제품유형별 가격안내-그룹웨어 PRODUCE 404"/>
+<meta property="og:url" content="http://www.daouoffice.com"/>
+<meta property="og:description" content="업무가 빨라지는 그룹웨어 PRODUCE 404, 클라우드 서비스형(그룹웨어형/메일형), 설치형, 가격 안내, 서비스 신청, 무료 상담"/>
+<meta property="og:image" content="http://daouoffice.co.kr/img/mobile_link02.png"/>
+<meta name="description" content="업무가 빨라지는 그룹웨어 PRODUCE 404, 클라우드 서비스형(그룹웨어형/메일형), 설치형, 가격 안내, 서비스 신청, 무료 상담">
+<meta name="keywords" content="그룹웨어 가격, 그룹웨어 도입, 그룹웨어 안내, 상담, 가격안내, 기업메일, 전자결재, 데모체험, 기업용 업무솔루션, 그룹웨어, 다우기술, PRODUCE 404, 클라우드">
+<!--SEO 최적화//-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>그룹웨어 PRODUCE 404</title>
+<meta property="og:title" content="그룹웨어 PRODUCE 404"/>
+<meta property="og:url" content="http://www.daouoffice.com"/>
+<meta property="og:description" content="업무가 빨라지는 그룹웨어, PRODUCE 404"/>
+<meta property="og:image" content="http://daouoffice.co.kr/img/mobile_link02.png"/>	
+<meta name="naver-site-verification" content="320a1f1208cd1be8e713cafb08964b11bbd6782b"/>
+<meta name="description" content="국내 최초 협업 그룹웨어, 모바일연동100%, 무상업그레이드, 24시간 기술지원">
+<meta name="google-site-verification" content="G6P9EGveKGLN77n6N5GZyS0TszfZrZrGnMmsjQTkpSE" /> 
+<link href="/images/favicon/daouoffice.ico" rel="shortcut icon">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+<link href="../css/basic.css" rel="stylesheet" type="text/css">
+<link href="../css/member.css" rel="stylesheet" type="text/css">
+<link href="../css/board.css" rel="stylesheet" type="text/css">
+<link href="../css/program.css" rel="stylesheet" type="text/css" />
+<link href="../css/layout.css" rel="stylesheet" type="text/css">
+<link href="../css/content.css" rel="stylesheet" type="text/css">
+<link href="../css/new_reset.css" rel="stylesheet" type="text/css">
+<link href="../css/new_common.css" rel="stylesheet" type="text/css">
+<link href="../css/price.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../js/libs/respond.min.js"></script>
+<script type="text/javascript" src="../js/libs/modernizr.min.js"></script>
+<script type="text/javascript" src="../js/jquery.scrolledFix.js"></script>
+<script type="text/javascript" src="../js/function.js"></script>
+<script type="text/javascript" src="../js/function_jquery.js"></script>
+<script type="text/javascript" src="../js/calendar_beans_v2.0.js"></script>
+<script type="text/javascript" src="../js/HuskyEZCreator.js"></script>
+<script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="../js/dev.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+<!--170630 naver-->
+<script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "Person",
+ "name": "PRODUCE 404",
+ "url": "http://www.daouoffice.com",
+ "sameAs": [
+   "https://www.facebook.com/withdaou",
+   "https://blog.naver.com/daouapps",
+   "https://www.youtube.com/channel/UCsY3aR2FYK4SbM2tBLksWtQ",
+   "http://tv.naver.com/daouapps"
+   ]
+}
+</script>
+<!--180423 kakao-->
+<script type="text/x-javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script> <script type="text/x-javascript"> kakaoPixel('5245117401860390612').pageView(); </script>
+
+
+
+</head>
+<body>
+<style>
+body{font-size:14px; letter-spacing: -1px; word-break: keep-all;}
+
+
+
+.nunito{font-family:'Nunito Sans', sans-serif;}
+.ns{font-family:'나눔스퀘어', NanumSquare, NS, '맑은 고딕', MalgunGothic, '돋움', Dotum;}
+.blind{display:block; overflow:hidden; position:absolute; left:-9999px; width:1px; height:1px; font-size:0; line-height:0; text-indent:-9999px;}
+input[type="search"]{-webkit-appearance:textfield; box-sizing:content-box; outline:none;} web chorome,safari remove border
+.float_clear:after{display:block; clear:both; content:"";} 
+
+header{position:absolute; width:100%; min-width:10px; height:90px; background:#FFF; z-index:50;}
+header .global_menu{display:table; width:100%; border-bottom:solid 1px #ededed;}
+header .global_menu li{float:left; width:33.33%; text-align:center; background:url(../image/util_line.gif) no-repeat; background-position:right;}
+header .global_menu li:last-child{background:none;}
+header .global_menu li a{display:block; height:30px; line-height:30px; font-size:12px; color:#848484;}
+header .global_menu li.on a{color:#ff8080;}
+header h1.top_logo{float:left;}
+header h1.top_logo img{width:182px; height:20px;}
+header h1.top_logo a span.nav_w{display:block;}
+header h2.nav_btn{float:right; margin:19px 17px 0 0;}
+header h2.nav_btn a{display:block; width:26px; height:22px; background:url(../images/common/m_nav_btn.gif) no-repeat;}
+.gnb{display:none;}
+.gnb.on{display:block; position:fixed; width:100%; height:100%; top:0; z-index:50;}
+.gnb .nav_close{position:absolute; right:85.93%; margin:17px 13px 0 0; z-index:50;}
+.gnb .gnb_wrap{position:absolute; width:85.93%; height:100%; right:0; background:#1d326c; overflow-y:auto; z-index:50;}
+
+.gnb .main{float:left; width:100%; border-top:solid 1px #192d65; border-bottom:solid 1px #2e437c;}
+.gnb .main li{background:url(../images/common/m_nav_arrow.gif) no-repeat right 20px;}
+.gnb .main li a{display:block; height:48px; line-height:48px; border-top:solid 1px #2e437c; border-bottom:solid 1px #192d65; padding-left:25px; font-family: 'Nunito Sans', sans-serif; color:#FFF; font-size:16px;}
+.gnb .main li a.main_link{position:relative; width:80%; margin-top:-50px; z-index:20;}
+.gnb .main li.on{background:url(../images/common/m_nav_arrow_on.gif) no-repeat right 20px;}
+.gnb .main li .sub{display:none;}
+.gnb .main li.on .sub{display:block;}
+.gnb .sub > li{background:#2a4181;}
+.gnb .sub > li > a{border-top:solid 1px #344a86; border-bottom:solid 1px #203570; font-family:'Noto Sans KR', sans-serif; font-size:14px;}
+.gnb:after{display:block; content:""; position:fixed; width:100%; height:100%; z-index:49; background:#000; opacity:0.7;}
+
+.top_fixed{position:fixed; height:60px; border-bottom:solid 1px #B2CCFF; z-index:50;}
+
+
+/* 1180px 이상 해상도 */
+@media screen and (min-width:1180px){
+.top_align{position:relative; max-width:1180px; margin:auto;}
+
+header{height:130px;}
+header h1.top_logo{position:relative; clear:both; margin:32px 0 0 0; z-index:51;}
+header h1.top_logo img{width:auto;}
+.gnb{display:block;}
+
+.gnb .gnb_wrap{width:1180px; height:auto; top:0; left:0; background:#FFF; overflow:visible;}
+
+
+
+.gnb nav:after{display:block; content:""; width:100%; position:fixed; top:90px; left:0; height:0; background:#FFF; border-bottom:solid 1px #FFFFFF; z-index:-1;
+		    transition-timing-function:ease-in-out;
+     -o-transition-timing-function:ease-in-out;
+   -moz-transition-timing-function:ease-in-out;
+-webkit-transition-timing-function:ease-in-out;
+        transition-duration:0.2s;
+     -o-transition-duration:0.2s;
+   -moz-transition-duration:0.2s;
+-webkit-transition-duration:0.2s;}
+.gnb nav:hover:after{height:280px; border-bottom:solid 2px #5CD1E5;}
+.gnb .main{position:absolute; top:80px; left:243px; width:auto; border-top:none; border-bottom:none;}
+.gnb .main li{background:none; float:left;}
+.gnb .main li a{height:auto; line-height:normal; border-top:none; border-bottom:none; padding:0 35px; color:#202023;}
+.gnb .main li a.main_link{display:none;}
+.gnb .main li:last-child a{padding:0 0 0 46px;}
+.gnb .main li a span{display:block; position:relative;}
+.gnb .main li a span:after{display:block; content:""; width:0px; height:4px; background:#000; margin:3px auto;
+		    transition-timing-function:ease-in-out;
+     		-o-transition-timing-function:ease-in-out;
+   -moz-transition-timing-function:ease-in-out;
+-webkit-transition-timing-function:ease-in-out;
+        transition-duration:0.2s;
+     -o-transition-duration:0.2s;
+   -moz-transition-duration:0.2s;
+-webkit-transition-duration:0.2s;}
+.gnb .main li:hover a span:after, .gnb .main li.on a span:after{width:100%;}
+.gnb .main li.on{background:none;}
+.gnb .main li .sub, .gnb .main li.on .sub{display:block; position:absolute; padding-top:0; margin-top:-40px; z-index:50; height:1px; overflow:hidden; opacity:0;
+		    transition-timing-function:ease-in-out;
+     -o-transition-timing-function:ease-in-out;
+   -moz-transition-timing-function:ease-in-out;
+-webkit-transition-timing-function:ease-in-out;
+        transition-duration:0.2s;
+     -o-transition-duration:0.2s;
+   -moz-transition-duration:0.2s;
+-webkit-transition-duration:0.2s;}
+.gnb nav:hover li .sub, .gnb nav:hover li.on .sub{padding-top:23px; margin-top:0; height:auto; opacity:1;}
+.gnb .sub > li{clear:both; background:#none; width:170px; height:30px; line-height:30px; margin-left:0px;}
+.gnb .sub > li:hover{border-bottom:none;}
+.gnb .sub > li > a{border-top:none; border-bottom:none; font-size:13px; color:#848484; padding:0 0; margin-left:46px;}
+.gnb .sub > li a:last-child{padding:0 0;}
+.gnb .sub > li > a:hover, .gnb .sub > li > a:focus{color:#4ABFD3;}
+.gnb:after{display:none;}
+
+.top_fixed h1.top_logo{margin:21px 0 0 0;}
+.top_fixed .top_util{display:none;}
+.top_fixed .main{top:20px;}
+.top_fixed nav:after{top:0;}
+.top_fixed nav:hover .top_sns{top:192px;}
+
+</style>
+<div id="wrap">
+
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ header ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+<header class="top_nav top_fixed">
+	<div class="top_align">
+	
+    <h1 class="top_logo"><a href="/"><span class="nav_w"><img src="image/process404_miri.png" width="202" height="20" ></span> </a></h1>
+    
+
+    <!-- class="on" 메뉴 활성화 -->
+    <div class="gnb ">
+    	<div class="gnb_wrap">
+      	
+        <!-- 서비스 메뉴 영역 -->
+        <nav>
+        	<ul class="main">
+        	<li>
+        		<a href="#c" data-url=""><span>PROCESS 404</span></a>			
+				<a href="" class="main_link"></a>
+				<ul class="sub">
+					<li><a href="">브랜드 소개</a></li>
+              	</ul>
+            </li>
+            
+            <li>
+            	<a href="#c" data-url=""><span>PERFORMANCE</span></a>			
+				<a href="" class="main_link"></a>
+             	<ul class="sub">
+					<li><a href="">게시판</a></li>
+					<li><a href="">문서 및 일정</a></li>
+					<li><a href="">예약 관리</a></li>
+					<li><a href="">주소록 관리</a></li>
+					<li><a href="">커뮤니케이션</a></li>
+				</ul>
+			</li>
+		
+          
+            
+            <li>
+				<a href="#c" data-url=""><span>SERVICE</span></a>			
+				<a href="" class="main_link"></a>
+				<ul class="sub">
+					<li><a href="">서비스 신청</a></li>
+              	</ul>
+            </li>
+           
+           <li>
+				<a href="#c" data-url=""><span>PRICE</span></a>			
+				<a href="" class="main_link"></a>
+				<ul class="sub">
+					<li><a href="">비용안내</a></li>
+              	</ul>
+            </li>
+            
+			<li>
+				<a href="#c" data-url=""><span>NOTICE</span></a>			
+				<a href="" class="main_link"></a>
+				<ul class="sub">
+					<li><a href="">공지사항</a></li>
+					<li><a href="">고객센터 안내</a></li>
+              	</ul>
+            </li>
+   
+          </ul>
+        </nav>
+   
+      </div>
+    
+  </div>
+</div>
+</header>
+			
+		
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ content  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+
+<div id="content">
+	
+
+<div class="sub_common">
+	<div class="sub_visual">
+		<img src="../img/sub_visual_00.jpg" alt="" />
+	</div>
+	<div class="sub_nav">
+		<div class="pc_display22" style="display:none;">
+			<span class="home"><a href="/"><img src="../img/sn_home.png" alt="홈으로" /></a></span>
+			<span class="depth01"></span>
+			<span class="depth02"></span>
+		</div>
+		
+		<h3 class="depth02">가격안내</h3>
+		<p class="pc_display">PRODUCE 404는 다양한 유형의 제품을 제공합니다. 고객의 규모, 환경, 예산을 고려하여 적합한 그룹웨어를 선택하시기 바랍니다.<br>기타 궁금하신 사항은 상담문의를 남겨주시면 친절하게 안내해 드리겠습니다.</p>
+	</div>
+</div>
+<!-- //sub_common -->
+
+<script>
+	var url = window.location.pathname;
+	var urlPathname = url.substring( 0, url.substring(1).indexOf('/')+2 ); // pathname중 / ~ / 까지
+	var urlPathname02 = url.substring(0, url.lastIndexOf('/') + 1)
+	var fileName = url.substring(url.lastIndexOf('/') + 1);
+	var isForDev = fileName == "read.jsp" || fileName == "edit.jsp" || fileName == "write.jsp" || fileName == "password.jsp";
+
+	$(".header_pc .gnb li ul li a").each(function(){
+		if ( $(this).attr("href") == url ){
+			var idx = $(this).parent().parent().parent().index();
+			var depth01 = $(this).parent().parent().siblings("a").text();
+			var depth02 = $(this).text();
+			var dt = $(this).attr("data-text");
+
+			$(".sub_visual").find("img").attr("src", "/img/sub_visual_0" + idx + ".jpg");
+
+			$(".sub_nav .depth01").text(depth01);
+			$(".sub_nav .depth02").text(depth02);
+			$(".sub_nav p").html(dt);
+		} else if ( isForDev ){
+			if ( $(this).attr("href").indexOf( url.substring(0, url.lastIndexOf('/')+1 ) ) > -1 ){
+				var idx = $(this).parent().parent().parent().index();
+				var depth01 = $(this).parent().parent().siblings("a").text();
+				var depth02 = $(this).text();
+				var dt = $(this).attr("data-text");
+
+				$(".sub_visual").find("img").attr("src", "/img/sub_visual_0" + idx + ".jpg");
+
+				$(".sub_nav .depth01").text(depth01);
+				$(".sub_nav .depth02").text(depth02);
+				$(".sub_nav p").html(dt);
+			}
+		} else if ( urlPathname == "/helpdesk/" ){
+			if ( urlPathname02 == "/helpdesk/faq/" ){
+				var idx = $(this).parent().parent().parent().index();
+				var depth01 = $(this).parent().parent().siblings("a").text();
+				var depth02 = $(this).text();
+				var dt = $(this).attr("data-text");
+
+				$(".sub_visual").find("img").attr("src", "/img/sub_visual_0" + idx + ".jpg");
+
+				$(".sub_nav .depth01").text(depth01);
+				$(".sub_nav .depth02").text("FAQ");
+				$(".sub_nav p").text("PRODUCE 404 서비스형 도입 시 자주 문의 주시는 사항에 대해 답변드립니다.");
+				/*$(".sub_nav p").html(dt);*/
+			}
+		}
+	});
+</script>
+
+
+	<!-- //sub_common -->
+	<!-- //PC -->
+	<div class="sub_con pc_display">
+		<div class="price_new">
+			<div class="inner">
+			<div class="type_tab">
+				
+			</div>
+			<div class="type_cont">
+				<div class="type type_price" style="display: block;">
+					<h3>제공메뉴</h3>
+					<i class="separator"></i>
+					<p class="desc1">제공 메뉴 확인을 통해 기업에 맞는 합리적인 업무관리 솔루션을 선택하시기 바랍니다.</p>
+					<ul class="product_list">
+						
+						<li>
+							<div>
+								<h4>다양한 협업 기능의<br><span>그룹웨어형</span></h4>
+								<p>12개의 메뉴 제공.<br>
+									기업 내 효율적인 업무환경을 위해 전자결재와<br>
+									메일을 기본으로 다양한 협업 기능이 필요한<br>
+									고객사에 제공.</p>
+								<p class="special"><i></i> : PRODUCE 404만의 특화된 협업기능</p>
+								<div class="btn_wrap">
+									<a href="" class="btn btn_normal">상담문의</a>
+								</div>
+							</div>
+							<div class="func func_02"></div>
+						</li>
+					</ul>
+				
+					<h3>가격 확인</h3>
+					<i class="separator"></i>
+					<p class="desc1">최소 20인부터 다양하고 합리적인 패키지 가격을 제공합니다.</p>
+					<table>
+            <thead>
+              <tr>
+                <td style="text-align:right;"colspan="5">* 부가세별도</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+			<th rowspan="2">구분</th>
+			<th rowspan="2" colspan="2">상세 구분</th>
+			<th class="table_type" colspan="2">그룹웨어형</th>
+              </tr>
+		<tr>
+			
+			<th class="table_type  table_type2"><span>기본상품</span></th>
+			<th class="table_type"><span class="price_new_icon">용량 더드림</span></th>
+		</tr>
+              <tr>
+                <td colspan="3">가입비 (도입 시, 최초 1회)</td>
+                <td style="text-align:center;" colspan="2">50,000 <span>원</span></td>
+              </tr>
+              <tr>
+                <td rowspan="6">사용료<br>(기본용량)</td>
+                <td rowspan="5">기본료</td>
+                <td class="bg_grayf5">20인 패키지</td>
+                <td class="bg_grayf5"> 20,000 <span>원/ 월</span><br>(20GB)</td>
+                <td class="bg_grayf5"> 40,000 <span>원/ 월</span><br>(100GB)</td>
+              </tr>
+              <tr>
+                <td>50인 패키지</td>            
+                <td>75,000 <span>원/ 월</span><br>(50GB)</td>            
+                <td>100,000 <span>원/ 월</span><br>(250GB)</td>
+              </tr> 
+              <tr>
+                <td class="bg_grayf5">100인 패키지</td>              
+                <td class="bg_grayf5">125,000 <span>원/ 월</span><br>(100GB)</td>            
+                <td class="bg_grayf5">160,000 <span>원/ 월</span><br>(500GB)</td>
+              </tr> 
+              <tr>
+                <td>200인 패키지</td> 
+                <td>200,000 <span>원/ 월</span><br>(200GB) </td>            
+                <td>250,000 <span>원/ 월</span><br>(1TB)</td>
+               
+              </tr> 
+              <tr>
+                <td class="bg_grayf5">200인 초과</td>            
+                <td class="bg_grayf5" colspan="4">별도 문의</td>            
+              </tr> 
+              <tr>
+                <td>사용자 추가</td>            
+                <td>1인 추가</td>                   
+                <td>2,500 <span>원/ 월</span><br>(1GB) </td>            
+                <td>3,000 <span>원/ 월</span><br>(5GB) </td>
+              </tr>   
+              <tr style="border-top: 2px solid #c3c3c3;">
+                <td rowspan="6">부가 서비스</td>            
+                <td rowspan="3">용량 추가</td>            
+                <td>10GB 추가</td> 
+                <td colspan="4">10,000 <span>원/ 월</span><br>
+                </td>
+              </tr>
+              <tr>
+                <td>100GB 추가</td>                   
+                <td colspan="4">50,000 <span>원/ 월</span><br>
+                  <span class="fc_red">최초?도입?시,?첫번째?결제에?한하여?1+1?용량?제공</span>
+                </td>
+              </tr>
+              <tr>
+                <td>1TB 추가</td>                    
+				
+				
+				
+                <td colspan="4">150,000 <span>원/ 월</span></td>
+              </tr>
+              <tr>
+                <td colspan="2">가상 도메인</td>                    
+                <td colspan="4">(1 도메인당) 10,000 <span>원/ 월</span></td>            
+              </tr> 
+              <tr>
+                <td colspan="2">멀티 컴퍼니</td>                       
+                <td colspan="4">(회사당) 10,000 <span>원/ 월</span></td>            
+              </tr> 
+              <tr>
+                <td colspan="2">전자결재 제작대행</td>            
+                <td colspan="4">비용 별도 문의</td>            
+              </tr>
+            </tbody>
+          </table>
+					<div class="note">
+					<!-- <p>※ 300인 이상 사용 고객사의 경우 별도 문의 부탁 드립니다.</p> -->
+					<p class="fc_red">※ 용량 더드림 패키지는 최초 도입 시에만 신청이 가능한 상품이며, 기본상품 패키지에서 용량 더드림 패키지 변경은 불가합니다.</p>
+					<p class="fc_red">※ 용량?1+1?이벤트는 최초 도입 시에만?신청할?수?있는?이벤트?상품이며, 적용된 용량은 서비스 연장시에도 동일한 비용으로 이용할 수 있습니다.</p>
+					</div>
+
+		<div class="event_wrap">
+			<p class="event_tit fc_red">※ 장기 계약 프로모션 안내</p>
+			<p class="fs_normal">&nbsp;&nbsp;&nbsp;&nbsp;- 12개월 결제 시, 패키지 기본 사용료 5% + 사용자 추가 5% 할인 제공<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;- 24개월 결제 시, 패키지 기본 사용료 10% + 사용자 추가 10% 할인 제공</p>
+		</div> 
+					<div class="btn_action">
+						<a class="btn" href="">상담신청</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			
+			
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ evnt_banner ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->			
+				
+	<!--  	
+	<div class="evnt_banner" style=" text-align: center; background: #25cad3; ">
+	<div class="inner">
+		<a href="http://blog.daouoffice.com/update/2019/05/09/shinhancardpromotion-update.html" target="_blank">
+			<img src="http://daouoffice.com/img/banner/190509_bottom.jpg" alt="">
+		</a>
+	</div>
+</div>
+
+<div class="evnt_banner" style=" text-align: center; background: #25cad3; " >
+	<div class="inner">
+		<a href="http://blog.daouoffice.com/update/2019/05/09/shinhancardpromotion-update.html" target="_blank">
+			
+		</a>
+	</div>
+</div>
+
+<script>
+  $(window).load(function(){
+    $(".sub_nav .depth01").hide();
+    $(".sub_nav .depth02").text("가격안내");
+    $(".sub_nav p").html("PRODUCE 404는 다양한 유형의 제품을 제공합니다. 고객의 규모, 환경, 예산을 고려하여 적합한 그룹웨어를 선택하시기 바랍니다.<br>기타 궁금하신 사항은 상담문의를 남겨주시면 친절하게 안내해 드리겠습니다.");
+  });
+</script>
+<script>
+$(".type_tab a").click(function(){
+	var idx = $(this).index();
+	$(".type_tab a").removeClass("active");
+	$(this).addClass("active");
+	$(".type_cont .type").hide();
+	$(".type_cont .type").eq(idx).fadeIn(200);
+});
+$(".m_type_tab a").click(function(){
+	var idx = $(this).index();
+	$(".m_type_tab a").removeClass("active");
+	$(this).addClass("active");
+	$(".m_type_cont .type").hide();
+	$(".m_type_cont .type").eq(idx).fadeIn(200);
+});
+</script>
+-->
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ footer  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■-->
+
+
+<div class="footer_wrap">
+	<div class="top_btn_wrap">
+		<div class="top_btn">
+			<a href="javascript:;"><img src="../images/btn_top.png" alt="TOP" /></a>
+		</div>
+	</div>	
+	<div class="row footer">
+		<div class="inner">
+			<div class="f_menu">
+				<div class="navi_box">
+					<h3>PRODUCE 404 소개</h3>
+					<ul>
+						<li><a href="http://daou.com/" target="_blank">회사소개</a></li>
+						<li><a href="http://daouoffice.com/intro/index.jsp">PRODUCE 404란</a></li>
+						<li><a href="http://daouoffice.com/intro/cooperation.jsp">기능안내</a></li>
+						<li><a href="http://daouoffice.com/helpdesk/index.jsp">고객정책</a></li>
+					</ul>
+				</div>
+				<div class="navi_box">
+					<h3>체험하기</h3>
+					<ul>
+						<li><a href="http://daouoffice.com/switch.jsp">왜 PRODUCE 404인가</a></li>
+						<li><a href="http://daouoffice.com/tour/index.jsp">한 눈에 둘러보기</a></li>
+						<li><a href="http://daouoffice.com/consultdemo.jsp">상담 및 무료체험</a></li>
+						<li><a href="http://daouoffice.com/partner/index.jsp">고객사 현황</a></li>
+					</ul>
+				</div>
+				<div class="navi_box">
+					<h3>시작하기</h3>
+					<ul>
+						<li>
+							<a onclick="openDOapply()" style="cursor: pointer;">
+	            				<span style="cursor: pointer;">서비스 신청</span>
+					 	   </a>
+						    <script>
+						        function openDOapply() {
+						        window.open("http://pay.daouoffice.com/apply/", "서비스 신청하기", "width=1000,height=800,resizable=yes,scrollbars=yes");
+						        }
+						    </script>
+				        </li>
+						<li><a href="http://daouoffice.com/price/index.jsp">유형 및 가격 안내</a></li>
+						<li><a href="http://daouoffice.com/tieproduct.jsp">제휴상품</a></li>
+						<li><a href="http://daouoffice.com/helpdesk/faq/index.jsp?category_fk=1">FAQ</a></li>
+						<!--li><a href="">보안상품</a></li-->
+						
+					</ul>
+				</div>
+				<div class="navi_box">
+					<h3>활용하기</h3>
+					<ul>
+						<li><a href="http://daouoffice.com/helpdesk/schedule/index.jsp">교육안내 및 신청</a></li>
+						<li><a href="http://daouoffice.com/partner/video/index.jsp">도움말 동영상</a></li>
+						<li><a href="http://daouoffice.com/case.jsp">활용사례</a></li>
+						<!--li><a href="">Works 가이드</a></li-->
+					</ul>
+				</div>
+				<div class="navi_box">
+					<h3>PRODUCE 404 소식</h3>
+					<ul>
+						<li><a href="http://daouoffice.com/helpdesk/notice/index.jsp">공지사항</a></li>
+						<li><a href="http://daouoffice.com/helpdesk/update/index.jsp">이벤트</a></li>
+
+					</ul>
+				</div>	
+				<div class="navi_box">
+					<h3>고객센터</h3>
+					<ul>
+						<li><a href="http://daouoffice.com/docenter.jsp">고객센터</a></li>
+					</ul>
+				</div>			
+				<div class="navi_box">
+					<h3>기타</h3>
+					<ul>
+						<li><a href="http://daouoffice.com/privacy.jsp">개인정보처리방침</a></li>
+						<li><a href="http://daouoffice.com/terms.jsp">서비스 이용약관</a></li>
+						<li><a href="http://daouoffice.com/spam.jsp">불법스팸 방지 운영 정책</a></li>
+						<!--li><a href="http://daouoffice.com/error_report.jsp">장애신고접수</a></li-->
+					</ul>
+				</div>
+				<div class="navi_box">
+					<h3>관련사이트</h3>
+					<ul>
+						<li><a href="http://www.daouidc.com/" target="_blank">다우 IDC/Cloud</a></li>
+						<li><a href="http://www.halfdomain.co.kr/" target="_blank">반값도메인</a></li>
+						<li><a href="http://www.terracemail.co.kr/" target="_blank">테라스메일</a></li>
+						<!--li><a href="http://www.daoupartner.com/" target="_blank">다우파트너 라운지</a></li-->
+						<!--li><a href="https://care.daouoffice.co.kr/hc/ko" target="_blank">DO CARE Lounge (서비스형)</a></li>
+						<li><a href="https://manual.daouoffice.co.kr/hc/ko" target="_blank">DO CARE Lounge (설치형)</a></li-->
+					</ul>
+				</div>
+			</div>
+			<div class="contactus">
+				<h3>Contact Us</h3>
+				<div class="call">
+					<ul>
+						<li>
+							<p>도입 전 상담문의 -</p>
+							<p class="pc_display">1577?3019</p>
+							<p class="mo_display"><a href="tel:15773019" onclick="ga('send','event','conversion_call','click','전화연결');">1577?3019</a></p>
+						</li>
+						<!--li>
+							<p>도입 후 기술문의 (서비스형) -</p>
+							<p class="pc_display">1599 - 9460</p>
+							<p class="mo_display"><a href="tel:15999460">1599 - 9460</a></p>
+						</li-->					
+						<!--li>
+							<p>도입 후 기술문의 (설치형) -</p>
+							<p>1599 - 3268</p>
+						</li-->
+					</ul>
+					<p class="time">
+						상담시간 : 09:00 ~ 17:00<br>
+						점심시간 : 11:30 ~ 13:00<br>
+						(도입 후 기술 문의는 야간 장애 접수 가능)
+					</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+	<!-- //footer -->
+
+<div class="row footer_copy">
+	<div class="inner">
+		<div class="copy">
+			<p>경기도 용인시 수지구 디지털벨리로 81, 6층(죽전동, 디지털스퀘어) | ㈜다우기술 | 대표이사 김윤덕 </p>
+			<p>사업자 등록번호 220-81-02810 | 통신판매업신고 제 2010 ? 용인수지 ? 114호 &nbsp; 
+				<a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=&apv_perm_no=2010564001730200114" class="btn btn_ghost2" target="_blank">사업자 정보 확인</a>
+			</p>
+			<p>호스팅 서비스 제공자 : ㈜ 다우기술 | Email: daouoffice@daou.co.kr </p>
+			<p>Copyright DAOU TECHONOLOGY INC. All rights reserved.</p>
+		</div>
+		
+		<div class="social">
+			<ul>
+				<li><a href="http://www.facebook.com/withdaou" target="_blank" title="facebook"></a></li>
+				<li><a href="http://blog.naver.com/daouapps" target="_blank" title="blog"></a></li>
+				<li><a href="http://www.slideshare.net/DaouOffice" target="_blank" title="slideshare"></a></li>
+				<li><a href="https://www.youtube.com/channel/UCsY3aR2FYK4SbM2tBLksWtQ" target="_blank" title="youtube"></a></li>
+				<li><a href="https://pf.kakao.com/_bmnjxl" target="_blank" title="kakaotalk"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="row footer_groupSelc">
+	<div class="inner">
+		<a href="http://www.daou.co.kr/index.php/ko/company/group" target="_blank" class="groupView">다우키움그룹 전체보기<span class="bul_more"></span></a>
+		<select class="selGroup" name="select1" onChange="window.open(value,'_blank');">
+			<option>다우기술 서비스 바로가기</option>
+			<option value="https://biz.ppurio.com/">[문자-기업] 비즈뿌리오</option>
+			<option value="http://www.ppurio.com/mgr/index.qri">[문자-개인] 뿌리오</option>
+			<option value="http://enfax.ppurio.com/mgr/index.qri">[온라인팩스] 엔팩스</option>
+			<option value="https://bizmailer.co.kr/bizsmart/manager/main.do">[대량메일] 비즈메일러</option>
+			<option value="http://www.donutbook.co.kr/">[모바일쿠폰] 도넛북</option>
+			<option value="http://callmix.co.kr/html/index.html">[050번호] 콜믹스</option>
+			<option value="https://telpass.bedal365.co.kr/index1.html">[지역정보책자] 텔패스</option>
+			<option value="http://www.bedal365.co.kr/info3.html">[배달App] 배달365</option>
+			<option value="http://www.sabangnet.co.kr/">[쇼핑몰통합관리] 사방넷</option>
+			<option value="https://www.snsform.co.kr/index.jsp">[SNS커머스] SNS Form</option>
+			<option value="https://www.unicro.co.kr/index.jsp">[에스크로] 유니크로</option>
+			<option value="http://www.daouoffice.com/">[그룹웨어] PRODUCE 404</option>
+		</select>
+		<ul class="groupView">
+			<li><a href="https://www.kiwoom.com" target="_blank" class="bi_group01">키움증권</a></li>
+			<li><a href="http://www.saramin.co.kr" target="_blank" class="bi_group02">사람인</a></li>
+			<li><a href="http://www.mirae-tech.co.kr/miraetech/index/index.jsp" target="_blank" class="bi_group03">미래테크놀로지</a></li>
+			<li><a href="https://www.daoudata.co.kr" target="_blank" class="bi_group04">다우데이타</a></li>
+			<li><a href="https://www.signgate.com/main.sg" target="_blank" class="bi_group05">한국정보인증</a></li>
+			<li class="last"><a href="http://www.kidaristudio.com" target="_blank" class="bi_group06">다우인큐브</a></li>
+		</ul>
+	</div>									
+</div>
+
+
+<!--div class="btn_ch_trouble_wrap">
+	<a href="https://goo.gl/BFeb9W" class="btn_ch_trouble" target="_blank" onclick="ga('send','event','chat','click','채팅상담');"><span>기능문의/ 장애신고</span></a>
+</div-->
+<!-- //footer -->
+
+
+<script src="/javascripts/do.js"></script>
+<script>
+	$(".top_btn a").click(function(){
+		$("html, body").animate({scrollTop : 0}, "slow");
+	});
+</script>
+
+<!-- Channel Plugin Scripts -->
+<script>
+  window.channelPluginSettings = {
+    "pluginKey": "a95a9916-ce4c-45b0-b55a-86bc4e2fab96"
+  };
+  (function() {
+    var node = document.createElement('div');
+    node.id = 'ch-plugin';
+    document.body.appendChild(node);
+    var async_load = function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.channel.io/plugin/ch-plugin-web.js';
+      s.charset = 'UTF-8';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    };
+    if (window.attachEvent) {
+      window.attachEvent('onload', async_load);
+    } else {
+      window.addEventListener('DOMContentLoaded', async_load, false);
+    }
+  })();
+</script>
+<!-- End Channel Plugin -->
+
+
+<!--Global site tag (gtag.js) -Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46216133-1"></script>
+<script>
+window.dataLayer= window.dataLayer|| [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-46216133-1');
+</script>
+<!--Global site tag (gtag.js) -Google Analytics  End -->
+
+
+<!--AceCounter-Plus Log Gathering for AceTag Manager V.9.2.20170103-->
+<script type="text/javascript">
+var _AceTM = (function (_j, _s, _b, _o, _y) {
+	var _uf='undefined',_pmt='',_lt=location;var _ap = String(typeof(_y.appid) != _uf ? _y.appid():(isNaN(window.name))?0:window.name);var _ai=(_ap.length!=6)?(_j!=0?_j:0):_ap;if(typeof(_y.em)==_uf&&_ai!=0){var _sc=document.createElement('script');var _sm=document.getElementsByTagName('script')[0];
+	var _cn={tid:_ai+_s,hsn:_lt.hostname,hrf:(document.referrer.split('/')[2]),dvp:(typeof(window.orientation)!=_uf?(_ap!=0?2:1):0),tgp:'',tn1:_y.uWorth,tn2:0,tn3:0,tw1:'',tw2:'',tw3:'',tw4:'',tw5:'',tw6:'',tw7:_y.pSearch};_cn.hrf=(_cn.hsn!=_cn.hrf)?_cn.hrf:'in';for(var _aix in _y){var _ns=(_y[_aix])||{};
+	if(typeof(_ns)!='function'){_cn.tgp=String(_aix).length>=3?_aix:'';_cn.tn2=_ns.pPrice;_cn.tn3=_ns.bTotalPrice;_cn.tw1=_ns.bOrderNo;_cn.tw2=_ns.pCode;_cn.tw3=_ns.pName;_cn.tw4=_ns.pImageURl;_cn.tw5=_ns.pCategory;_cn.tw6=_ns.pLink;break;};};_cn.rnd=(new Date().getTime());for(var _alx in _cn){
+	var _ct=String(_cn[_alx]).substring(0,128);_pmt+=(_alx+"="+encodeURIComponent((_ct!=_uf)?_ct:'')+"&");};_y.acid=_ai;_y.atid=_cn.tid;_y.em=_cn.rnd;_sc.src=((_lt.protocol.indexOf('http')==0?_lt.protocol:'http:')+'//'+_b+'/'+_o)+'?'+_pmt+'py=0';_sm.parentNode.insertBefore(_sc,_sm);};return _y;
+})(104959,'DQ-30-A', 'atm.acecounter.com','ac.js',window._AceTM||{});
+</script>
+<!--AceCounter-Plus Log Gathering for AceTag Manager End -->
+
+
+<!-- Google ad 20140527-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 971148971;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/971148971/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+<!-- Google ad End-->
+
+
+<meta name="naver-site-verification" content="320a1f1208cd1be8e713cafb08964b11bbd6782b"/> 
+<meta name="google-site-verification" content="G6P9EGveKGLN77n6N5GZyS0TszfZrZrGnMmsjQTkpSE" /> 
+
+<!--naver script-->
+<script type="text/javascript" src="http://wcs.naver.net/wcslog.js"> </script>
+<script type="text/javascript">
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_48e46786af42";
+if (!_nasa) var _nasa={};
+wcs.inflow("daouoffice.com");
+wcs_do(_nasa);
+</script>
+<!--naver script End-->
+
+
+<!--Daum DDN script-->
+<script type="text/x-javascript">
+    var roosevelt_params = {
+        retargeting_id:'Z6AbfPJRbJ8YWLCYSsKs2Q00',
+        tag_label:'iLpp-6v-Sse71lfCFroM5g'
+    };
+</script>
+<script type="text/x-javascript" src="//adimg.daumcdn.net/rt/roosevelt.js" async></script>
+<!--Daum DDN End-->
+
+<script type="text/javascript" async src="//cdn-aitg.widerplanet.com/js/wp_astg_4.0.js"></script>
+
+<!-- // WIDERPLANET SCRIPT END 2017.7.25 -->
+
+
+</div>
+<!-- //wrap -->
+</body>
+</html>
