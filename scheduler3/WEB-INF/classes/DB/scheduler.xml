@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="scheduler">
+
+ <typeAlias alias="scheduler" type="com.scheduler.SchedulerVO" />
+ 
+ <resultMap id="scheduler" class="scheduler">
+  <result property="event_id" column="event_id"/>
+  <result property="event_name" column="event_name"/>
+  <result property="start_date" column="start_date"/>
+  <result property="end_date" column="end_date"/>
+ </resultMap>
+ 
+ <select id="getEvent" resultMap="scheduler"> 
+ 	SELECT event_id, event_name, start_date, end_date FROM events
+ </select>
+
+ <update id="updateEvent" parameterClass="scheduler"> 
+ 	UPDATE events SET event_name=#event_name#, start_date=#start_date#, end_date=#end_date# WHERE event_id=#event_id#
+ </update>
+ 
+ <insert id="insertEvent" parameterClass="scheduler"> 
+ 	INSERT INTO events (event_id, event_name, start_date, end_date) VALUES (null, #event_name#, #start_date#, #end_date#)
+ 	<selectKey keyProperty="event_id" resultClass="Integer">
+ 		SELECT LAST_INSERT_ID()
+ 	</selectKey>
+ </insert>
+ 
+  <delete id="deleteEvent" parameterClass="int">
+  	DELETE FROM events WHERE event_id=#event_id# LIMIT 1
+  </delete>
+ 
+</sqlMap>
