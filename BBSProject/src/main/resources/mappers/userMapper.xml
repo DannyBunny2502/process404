@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mappers.userMapper">
+
+<select id = "joinDAO_idDuplChk" parameterType = "String" resultType = "int">
+    SELECT COUNT(*) FROM TBL_USERS WHERE ID = #{id}
+</select>
+
+	<insert id="insertUser" parameterType="com.edu.domain.UserDTO">
+	    INSERT INTO TBL_USERS(id, pw, pwConfirm, nickname) VALUES(#{id}, #{pw}, #{pwConfirm}, #{nickName})
+	</insert>
+	<update id="updateUser" parameterType="com.edu.domain.UserDTO">
+	    UPDATE TBL_USERS SET PW=#{pw} WHERE ID=#{id}
+	</update>
+	<delete id="deleteUser" parameterType="com.edu.domain.UserDTO">
+	    DELETE FROM TBL_USERS WHERE ID=#{id}
+	</delete>
+	<select id="getUser" parameterType="com.edu.domain.UserDTO" resultType="com.edu.domain.UserDTO">
+	    SELECT * FROM TBL_USERS WHERE ID=#{id}
+	</select>
+	<select id="getNickNameUser" parameterType="com.edu.domain.UserDTO" resultType="com.edu.domain.UserDTO">
+	    SELECT * FROM TBL_USERS WHERE NICKNAME=#{nickName}
+	</select>
+	<select id="confirmUser" parameterType="com.edu.domain.UserDTO" resultType="com.edu.domain.UserDTO">
+	    SELECT COUNT(*) FROM TBL_USERS WHERE ID=#{id}
+	</select>
+
+
+
+
+</mapper>
