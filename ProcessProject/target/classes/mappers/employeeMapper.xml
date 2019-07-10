@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mappers.employeeMapper">
+
+	<select id="join" resultType="com.edu.domain.EmployeeDTO">
+		select
+			emp_code, name_kor, name_eng, email, phone_number, birth, org_code, department_id, deparment_name, branch_id, branch_name, position, hire_date, fire_date, status, img_root, img_size
+				from EMPLOYEES
+					where emp_code = #{emp_code}
+	</select>
+	
+	<update id="infoUpdate" parameterType="com.edu.domain.EmployeeDTO">
+		update 
+			EMPLOYEES
+				set
+					id = #{id},
+					password = #{password},
+					name_kor = #{name_kor},
+					name_eng = #{name_eng},
+					email = #{email},
+					phone_number = #{phone_number},
+					birth = #{birth},
+					org_code = #{org_code},
+					<!-- department_id = #{department_id}, -->
+					deparment_name = #{deparment_name},
+					<!-- branch_id = #{branch_id}, -->
+					branch_name = #{branch_name},
+					position = #{position},
+					<!-- hire_date = #{hire_date},
+					fire_date = #{fire_date},
+					status = #{status}, 
+					img_root = #{img_root},-->
+					img_root = #{img_root}
+				where
+					emp_code = #{emp_code}
+	</update>
+
+</mapper>
+
