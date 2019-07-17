@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mappers.chatMapper">
+
+	
+	<!-- 채팅방 멤버 리스트 구할 때 -->
+	<select id="getMembers" resultType="com.edu.domain.EmployeeDTO">
+		select * from employees
+	</select>
+	
+	<!-- 채팅창에 내용 입력하고 send 버튼 눌렀을 때 db insert -->
+	<insert id="addChat" parameterType="map" useGeneratedKeys="true" keyProperty="chat_code">
+		insert into chat(sender, receiver, content, chat_date, readCheck)
+			values(
+					#{sender},
+					#{receiver},
+					#{content},
+					now(),
+					0
+				  )
+	</insert>
+	
+	<!-- 채팅방 채팅 내용 불러올때 -->
+	<select id="getLastChatById" parameterType="map" resultType="com.edu.domain.ChatVO">
+		<![CDATA[select * from chat 
+			where (((sender = #{sender} and receiver = #{receiver}) or (receiver = #{sender} and sender = #{receiver})) 
+					and chat_code > #{last_chat_code}) order by chat_date ]]>
+	</select>
+	
+	<!-- 채팅리스트 클릭 시, 채팅방 목록 가져올 때-->
+	<select id="getChats" parameterType="String" resultType="com.edu.domain.ChatVO">
+		select * from chat 
+			where chat_code in 
+				(select max(chat_code) from chat 
+					where sender = #{user} or receiver = #{user} group by sender, receiver)
+	</select>
+	
+	<!-- 개별 채팅방 들어갈 때, 안읽은 메시지 읽음으로 업데이트 -->
+	<update id="updateReadChat" parameterType="map">
+		update chat
+			set readCheck = 1
+				where (sender = #{chatPartner} and receiver = #{user})
+	</update>
+	
+	<!-- 채팅리스트 클릭 시, 각 채팅방 목록의 안읽은 메시지 개수 -->
+	<select id="getUnreadCount" parameterType="map" resultType="int">
+		select count(readCheck) from chat
+			where sender = #{chatPartner} and receiver = #{user} and readCheck = 0
+	</select>
+	
+	<!-- 메인화면, 사이드바에 노출될 안읽은 메시지 총 개수  -->
+	<select id="getAllUnreadCount" parameterType="String" resultType="int">
+		select count(readCheck) from chat
+			where receiver = #{user} and readCheck = 0
+	</select>
+	
+</mapper>
+

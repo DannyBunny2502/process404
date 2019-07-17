@@ -15,7 +15,7 @@
 			<label>emp_code</label> <input type="text" name="emp_code" value="${join.emp_code} "  />
 		</div>
 		
-		<form method="post"  >
+		<form method="post" enctype="multipart/form-data" >
 		
 		<div>
 			<label>name_kor</label> <input type="text" name="name_kor" value="${join.name_kor}"  />
@@ -66,12 +66,10 @@
 			<label>position</label> <input type="text" name="position" value="${join.position}"  />
 		</div>
 
-		<div>
-			<label>img_root</label> <input type="text" name="img_root" value="${join.img_root}"  />
-		</div>
+	
 		
 		 <div>
-			<label>img</label> <input type="file" name="img">
+			<label>img</label> <input type="file" name="file">
 		</div>
 		 
 		

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mappers.galleryMapper">
+
+
+	<!-- 게시물 작성 -->
+	<insert id="upload" parameterType="com.edu.domain.GalleryVO" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			gallery(author_id, title, content, newPicture, oldPicture, temp, views, upload_date, thumbs_up, thumbs_down)
+				values(#{author_id}, #{title}, #{content},#{newPicture},#{newPicture},#{newPicture}, 0, NOW(), 0, 0)
+	</insert>
+	
+	<!-- 게시물 수정 -->
+	<update id="update" parameterType="com.edu.domain.GalleryVO">
+		update 
+			gallery
+				set
+					title = #{title},
+					content = #{content},
+					
+					newPicture=#{newPicture},
+					oldPicture=temp,
+					temp = newPicture
+					
+					
+					
+				where
+					gallery_code = #{gallery_code}
+	</update>
+	<!-- 게시물 삭제 -->
+	<delete id="delete" parameterType="String">
+		delete from
+			gallery
+				where 
+					gallery_code = #{gallery_code} 
+	</delete>
+	<!-- 게시물 조회 -->
+	<select id="view"  resultType="com.edu.domain.GalleryVO">
+		select
+			gallery_code, author_id, title, content, views, newPicture, oldPicture, upload_date, emp.name_kor
+		from 
+			gallery gal, employees emp
+		where 
+			gallery_code = #{gallery_code} and gal.author_id=emp.id 
+		Order by gal.gallery_code desc limit 1
+			
+	</select>
+	<!-- 게시물 목록 -->
+	<select id="list" resultType="com.edu.domain.GalleryVO">
+		select
+			*
+				from gallery
+	</select>
+
+	<update id="viewCnt" parameterType="com.edu.domain.GalleryVO">
+		update GALLERY
+		set views=views+1
+		where gallery_code = #{gallery_code}
+	</update>
+
+</mapper>
+

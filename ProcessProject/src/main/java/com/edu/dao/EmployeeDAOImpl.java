@@ -61,5 +61,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		sql.update(namespace +".infoUpdate", dto);
 	}
 
-
+	public EmployeeDTO login(EmployeeDTO dto) throws Exception{
+		return sql.selectOne(namespace+".login",dto);
+	}
 }

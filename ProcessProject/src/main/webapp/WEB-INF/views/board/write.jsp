@@ -25,7 +25,7 @@
       <div class="form-group">
         <label class="control-label col-sm-2">author_id</label>
         <div class="col-sm-3">
-           <input type="text" class="form-control" name="author_id" maxlength="50" placeholder="Enter author_id">
+           <input type="text" class="form-control" name="author_id" maxlength="50" placeholder="Enter author_id" value="${employee.getId()}">
         </div>
       </div>
       

@@ -11,7 +11,7 @@ public interface EmployeeDAO {
 
 	public void infoUpdate(EmployeeDTO dto);
 
-	
+	public EmployeeDTO login (EmployeeDTO dto) throws Exception;
 	/*
 	 * // 게시물 수정 public void update(BoardVO vo) throws Exception;
 	 * 

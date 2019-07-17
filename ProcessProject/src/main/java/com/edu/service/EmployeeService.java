@@ -23,6 +23,7 @@ public interface EmployeeService {
 	EmployeeDTO join(String emp_code) throws Exception;
 
 	void infoUpdate(EmployeeDTO dto);
-
+	
+	EmployeeDTO login(EmployeeDTO dto) throws Exception;
 }
 

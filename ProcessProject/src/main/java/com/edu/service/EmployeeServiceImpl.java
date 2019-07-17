@@ -49,5 +49,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 		dao.infoUpdate(dto);
 	}
 
+	@Override
+	public EmployeeDTO login(EmployeeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.login(dto);
+	}
+
 
 }

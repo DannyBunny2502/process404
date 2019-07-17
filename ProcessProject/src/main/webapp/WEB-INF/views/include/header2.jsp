@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>header</title>
 
-<link href="${pageContext.request.contextPath}/resources/css/header.css" rel="stylesheet" />
+<link href="${path}/resources/css/header.css" rel="stylesheet" />
 
 
 </head>
@@ -16,7 +16,7 @@
 	
     <h1 class="top_logo">
     <a href="/">
-    	<span class="nav_w"><img src="resources/image/process404_miri.png"  alt="PROCESS 404" ></span>
+    	<span class="nav_w"><img src="/resources/image/process404_miri.png"  alt="PROCESS 404" ></span>
     </a>
     </h1>
    
@@ -34,7 +34,7 @@
               <ul class="sub">
 								<li><a href="/board/list">공지사항</a></li>
 								<li><a href="/contents/bakery.html">자유게시판</a></li>
-								<li><a href="/contents/bakery.html">갤러리</a></li>
+								<li><a href="/gallery/list">갤러리</a></li>
               </ul>
             </li>
 			            <li>
@@ -45,10 +45,10 @@
               </ul>
             </li>
 			            <li>
-				<a href="#c" data-url="/contents/coffee_lab.html"><span>문서관리</span></a>			
+				<a href="#c" data-url="/document/uploadAjax/"><span>문서관리</span></a>			
 				<a href="/contents/coffee_lab.html" class="main_link"></a>
               <ul class="sub">
-					<li><a href="/contents/coffee_lab.html">개인문서함</a></li>
+					<li><a href="/document/upload">개인문서함</a></li>
               </ul>
             </li>
 			            <li>
@@ -72,7 +72,7 @@
 			<a href="#c" data-url="/contents/notice.html?tb_name=notice"><span>메신저</span></a>			
 			<a href="/contents/notice.html?tb_name=notice" class="main_link"></a>
               <ul class="sub">
-								<li><a href="/contents/notice.html?tb_name=notice">채팅</a></li>								           
+					<li><a href="javascript:popup_chat()" target="_blank">채팅</a></li>								           
               </ul>
             </li>
 			          
@@ -84,6 +84,17 @@
   </div>
 </div>
 </header>
+
+<script>
+    function popup_chat(){
+        var url = "${path}/chat/chatList";
+        var name= "chatPopUp";
+        var option = "width:100, height=150, scrollbars=yes, location=no, top=50, left=100 ";
+        
+        window.open(url, name, option);
+    }
+</script>
+
 
 </body>
 </html>

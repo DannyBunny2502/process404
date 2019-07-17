@@ -10,7 +10,7 @@ ul,ol,dl{list-style-type:none;}
 a{text-decoration:none; color:#464646;}
 caption, legend{border:0px; display:none;}
 em{font-weight:bold; font-style:normal;}
-table{width:100%; border:0; border-collapse:collapse;}
+/* table{width:100%; border:0; border-collapse:collapse;} */
 button,html input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button}
 
 @font-face{font-family:NS;
@@ -31,7 +31,7 @@ header .global_menu li:last-child{background:none;}
 header .global_menu li a{display:block; height:30px; line-height:30px; font-size:12px; color:#848484;}
 header .global_menu li.on a{color:#ff8080;}
 header h1.top_logo{float:left;}
-header h1.top_logo img{width:100%; height:100%;}
+header h1.top_logo img{}
 header h1.top_logo a span.nav_w{/* display:block; */ margin-top:20px;}
 header h2.nav_btn{float:right; margin:19px 17px 0 0;}
 header h2.nav_btn a{display:block; width:26px; height:22px; background:url(../images/common/m_nav_btn.gif) no-repeat;}

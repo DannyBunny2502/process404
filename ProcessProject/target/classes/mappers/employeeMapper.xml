@@ -37,5 +37,11 @@
 					emp_code = #{emp_code}
 	</update>
 
+	<select id="login" resultType="com.edu.domain.EmployeeDTO">
+		select
+			emp_code, id, password, name_kor, name_eng, email, phone_number, birth, org_code, department_id, deparment_name, branch_id, branch_name, position, hire_date, fire_date, status, img_root, img_size
+				from EMPLOYEES
+					where id=#{id} and password= #{password}
+	</select>
 </mapper>
 

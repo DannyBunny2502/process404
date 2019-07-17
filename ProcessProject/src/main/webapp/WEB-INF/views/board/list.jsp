@@ -7,11 +7,14 @@
 <html>
 <head>
 	<title>게시물 목록</title>
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!--     <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
 	<script src="/resources/js/jquery-3.3.1.min.js"></script>
-	<script src="/resources/bootstrap/bootstrap/js/bootstrap.min.js"></script>
+<!-- 	<script src="/resources/bootstrap/bootstrap/js/bootstrap.min.js"></script> -->
+	<link href="/resources/css/board.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+
+<%@ include file="../include/header2.jsp" %>
 
 <!-- CREATE TABLE NOTICE
 (
@@ -27,20 +30,24 @@
     PRIMARY KEY (notice_code)
 ); -->
 
-<div class="container">
-	<table class="table table-bordered table-striped nanum table-hover">
+
+
+<div class="board" style="padding:70px;">
+<Br>
+	<h2><b>공지사항</b></h2><br>
+	공지사항입니다. 잘 체크해 주시길 바랍니다.
+	<br><Br>
+	
+<br>
+	<table style="background-color:white;">
 	<!-- <table border="1"> -->
 		<thead>
 			<tr>
-				<th>notice_code</th>
-				<th>author_id</th>
-				<th>author_password</th>
-				<th>title</th>
-				<th>content</th>
-				<th>views</th>
-				<th>file_root</th>
-				<th>file_size</th>
-				<th>upload_date</th>
+				<th>번호</th>
+				<th>작성자</th>
+				<th>제목</th>
+				<th>조회수</th>
+				<th>게시일자</th>
 				
 			</tr>
 		</thead>
@@ -53,12 +60,11 @@
 					</td>
 					
 					<td>${list.author_id}</td>
-					<td>${list.author_password}</td>
+			
 					<td>${list.title}</td>
-					<td>${list.content}</td>
+			
 					<td>${list.views}</td>
-					<td>${list.file_root}</td>
-					<td>${list.file_size}</td>
+			
 					<td>${list.upload_date}</td>
 				
 				</tr>
@@ -68,6 +74,10 @@
 	</table>
 	
 	<a href="/board/write">글쓰기</a>
+	<p>
+	${employee.getId() }
+	</p>
+	<a href="/">바탕화면</a>
 </div>
 </body>
 </html>
