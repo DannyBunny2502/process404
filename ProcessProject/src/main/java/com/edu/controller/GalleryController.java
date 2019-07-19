@@ -20,6 +20,7 @@ import org.springframework.util.FileCopyUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,8 +29,8 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.edu.domain.GalleryVO;
+import com.edu.domain.likeVO;
 import com.edu.service.GalleryService;
-import com.edu.functions.Uploader;
 
 @Controller
 @RequestMapping("/gallery")
@@ -39,8 +40,6 @@ public class GalleryController {
 
 	@Inject
 	GalleryService service;
-
-	Uploader uploader;
 	
 	@Resource(name="gallery_img")
 	// String uploadPath = "c:/document/upload"로 직접 정해도 된다.
@@ -102,11 +101,20 @@ public class GalleryController {
 	public void getView(@RequestParam("gallery_code") String gallery_code, Model model) throws Exception {
 
 		GalleryVO gallery = null;
+		String likeCnt=null;
 		
 		gallery = service.view(gallery_code); 
-		 service.viewCnt(gallery);
 		
+		likeCnt= service.like(gallery_code);
+		 service.viewCnt(gallery);
+	
+		/*
+		 * likeVO lvo = null; lvo.setGallery_code(gallery_code); lvo.setId(id);
+		 * if(service.likeCheck(likeData)==null) { // 값이 없을 때
+		 */		 
+		 
 		model.addAttribute("gallery", gallery);
+		model.addAttribute("likeCnt",likeCnt);
 	}
 
 	// 게시물 수정
@@ -167,26 +175,53 @@ public class GalleryController {
 		return "redirect:/gallery/list";
 	}
 	
+	// 1일 때 UP(+1), 0일 때 DOWN(-1)
 	@ResponseBody
-	@RequestMapping(value="/thumbs", method = RequestMethod.GET, produces="application/json")
-	public void thumbs(HttpServletRequest httpRequest) throws Exception {
-		System.out.println("UP!");
+	@RequestMapping(value="/thumbs", method = RequestMethod.POST)
+	public Object thumbsPost(@RequestBody likeVO likeData, HttpServletRequest httpRequest) throws Exception {
+	
+			
+		if(service.likeCheck(likeData)==null) { // 값이 없을 때
+			System.out.println("좋아요!");
+			likeData.setHeart("0");
+			service.likeUp(likeData);
+
+		}else if(service.likeCheck(likeData)!=null){  // 값이 있을 때
+			likeData.setHeart("1");
+			System.out.println("좋아요 취소!");
+			service.likeDown(likeData.getId());
+			
+		}
 		
-		/*
-		 * int thumbs = Integer.parseInt(httpRequest.getParameter("thumbs")); int
-		 * gallery_code = Integer.parseInt(httpRequest.getParameter("gallery_code"));
-		 * 
-		 * GalleryVO vo = new GalleryVO();
-		 * 
-		 * System.out.println(thumbs);
-		 * 
-		 * if(thumbs > 0) { // 1일 때
-		 * 
-		 * System.out.println("service.thumbs_up_plus(vo)"); thumbs=0; }else {
-		 * System.out.println("service.thumbs_up_minus(vo)"); thumbs=1; }
-		 * 
-		 * return thumbs;
-		 */
+		System.out.println(likeData.getCheck());
+		System.out.println(likeData.getGallery_code());
+		System.out.println(likeData.getId());
+		
+		String likeCount= service.like(likeData.getGallery_code());
+		System.out.println(likeCount);
+		
+		likeData.setCheck(likeCount);
+		
+		return likeData;
+	}
+
+	@ResponseBody
+	@RequestMapping(value="/thumbsView", method = RequestMethod.POST)
+	public String thumbsGet(@RequestBody likeVO likeData, HttpServletRequest httpRequest) throws Exception {
+	
+		System.out.println("thumbssssssssss");
+		if(service.likeCheck(likeData)==null) { // 값이 없을 때
+			System.out.println("좋아요!");
+			likeData.setHeart("0");
+
+		}else if(service.likeCheck(likeData)!=null){  // 값이 있을 때
+			likeData.setHeart("1");
+			System.out.println("좋아요 취소!");
+		
+			
+		}
+		
+		return likeData.getHeart();
 	}
 
 	

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.edu.domain.BoardVO;
 import com.edu.domain.GalleryVO;
+import com.edu.domain.likeVO;
 
 public interface GalleryDAO {
 
@@ -24,4 +25,11 @@ public interface GalleryDAO {
 
 	public void viewCnt(GalleryVO vo) throws Exception;
 
+	public void likeUp(likeVO vo) throws Exception;
+	
+	public void likeDown(String id) throws Exception;
+	
+	public String like(String gallery_code)throws Exception;
+	
+	public String likeCheck(likeVO vo) throws Exception;
 }

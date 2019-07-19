@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.edu.domain.GalleryVO;
+import com.edu.domain.likeVO;
 
 @Repository
 public class GalleryDAOImpl implements GalleryDAO {
@@ -55,6 +56,29 @@ public class GalleryDAOImpl implements GalleryDAO {
 	public void viewCnt(GalleryVO vo) throws Exception {
 		// TODO Auto-generated method stub
 		sql.update(namespace+".viewCnt", vo);
+	}
+
+	@Override
+	public void likeUp(likeVO vo) {
+		// TODO Auto-generated method stub
+		sql.insert(namespace+".likeUp",vo);
+	}
+
+	@Override
+	public void likeDown(String id) {
+		// TODO Auto-generated method stub
+		sql.delete(namespace+".likeDown", id);
+	}
+	
+	@Override
+	public String like(String gallery_code) {
+		return sql.selectOne(namespace+".like", gallery_code);
+	}
+
+	@Override
+	public String likeCheck(likeVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		return sql.selectOne(namespace+".likeCheck", vo);
 	}
 
 }

@@ -12,14 +12,11 @@ public interface EmployeeDAO {
 	public void infoUpdate(EmployeeDTO dto);
 
 	public EmployeeDTO login (EmployeeDTO dto) throws Exception;
-	/*
-	 * // 게시물 수정 public void update(BoardVO vo) throws Exception;
-	 * 
-	 * // 게시물 삭제 public void delete(String notice_code) throws Exception;
-	 * 
-	 * // 게시물 조회 public BoardVO view(String notice_code) throws Exception;
-	 * 
-	 * // 게시물 목록 public List<BoardVO> list() throws Exception;
-	 */
+	
+	public EmployeeDTO findId(EmployeeDTO dto)throws Exception;
+	
+	public EmployeeDTO findPassword(EmployeeDTO dto) throws Exception;
+
+	public void changePassword(EmployeeDTO dto);
 
 }

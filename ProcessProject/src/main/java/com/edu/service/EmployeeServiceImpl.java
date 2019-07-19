@@ -14,28 +14,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Inject
 	private EmployeeDAO dao;
-	
-	/*
-	 * // 게시물 작성
-	 * 
-	 * @Override public void write(BoardVO vo) throws Exception { dao.write(vo); }
-	 * 
-	 * // 게시물 수정
-	 * 
-	 * @Override public void update(BoardVO vo) throws Exception { dao.update(vo); }
-	 * 
-	 * // 게시물 삭제
-	 * 
-	 * @Override public void delete(String notice_code) throws Exception {
-	 * dao.delete(notice_code); }
-	 * 
-	 * // 게시물 조회
-	 * 
-	 * @Override public BoardVO view(String notice_code) throws Exception { return
-	 * dao.view(notice_code); }
-	 * 
-	 * @Override public List<BoardVO> list() throws Exception { return dao.list(); }
-	 */
 
 	@Override
 	public EmployeeDTO join(String emp_code) throws Exception {
@@ -55,5 +33,24 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return dao.login(dto);
 	}
 
+	@Override
+	public EmployeeDTO findPassword(EmployeeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.findPassword(dto);
+	}
+
+	@Override
+	public EmployeeDTO findId(EmployeeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.findId(dto);
+	}
+
+	@Override
+	public void changePassword(EmployeeDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		dao.changePassword(dto);
+	}
+
+	
 
 }

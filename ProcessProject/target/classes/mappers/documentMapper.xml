@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.mappers.documentMapper">
+
+
+	<!-- 게시물 작성 -->
+	<insert id="upload" parameterType="com.edu.domain.documentVO" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			gallery(author_id, title, content, newPicture, oldPicture, temp, views, upload_date, thumbs_up, thumbs_down)
+				values(#{author_id}, #{title}, #{content},#{newPicture},#{newPicture},#{newPicture}, 0, NOW(), 0, 0)
+	</insert>
+	title, content, author_id, position, newFile, oldFile, 
+	temp, size, views, upload_date, thumbs_up, folder
+	<!-- 게시물 수정 -->
+	<update id="update" parameterType="com.edu.domain.documentVO">
+		update 
+			document
+				set
+					title = #{title},
+					content = #{content},
+					author_id = #{author_id},
+					position=#{position}
+					newFile=#{newFile},
+					oldFile=temp,
+					temp = newFile,
+					size=#{size},
+					views=#{views},
+					upload_date=#{upload_date},
+					thumbs_up,
+					folder=#{folder}
+				where
+					document_code = #{document_code}
+	</update>
+	
+	<update id="moveFolder" parameterType="com.edu.domain.documentVO">
+		update 
+			document
+				set
+					folder=${folder}
+				where
+					document_code = #{document_code}
+	</update>
+	
+	<select id="findFolderName">
+		select count(*) from folder where folder =${folder}
+	</select>
+	
+	<!-- 게시물 삭제 -->
+	<delete id="delete" parameterType="String">
+		delete from
+			gallery
+				where 
+					gallery_code = #{gallery_code} 
+	</delete>
+	<!-- 게시물 조회 -->
+	<select id="view"  resultType="com.edu.domain.documentVO">
+		select
+			gallery_code, author_id, title, content, views, newPicture, oldPicture, upload_date, emp.name_kor
+		from 
+			gallery gal, employees emp
+		where 
+			gallery_code = #{gallery_code} and gal.author_id=emp.id 
+		Order by gal.gallery_code desc limit 1
+			
+	</select>
+	<!-- 게시물 목록 -->
+	<select id="list" resultType="com.edu.domain.documentVO">
+		select
+			*
+				from document
+	</select>
+
+	<update id="viewCnt" parameterType="com.edu.domain.documentVO">
+		update GALLERY
+		set views=views+1
+		where gallery_code = #{gallery_code}
+	</update>
+	
+	<insert id="likeUp" parameterType="com.edu.domain.likeVO">
+		insert into LIKES (gallery_code, id, checks) 
+		values (#{gallery_code}, #{id}, 1)  
+	</insert>
+	
+	<delete id="likeDown" parameterType="String">
+		delete from LIKES
+		where id = #{id}
+	</delete>
+	
+	<select id="like" resultType="String">
+		select count(*) from likes where gallery_code=#{gallery_code}
+	</select>
+
+	<select id="likeCheck" parameterType="com.edu.domain.likeVO" resultType="String">
+		select * from likes where gallery_code=#{gallery_code} and id=#{id}	
+	</select>
+</mapper>
+

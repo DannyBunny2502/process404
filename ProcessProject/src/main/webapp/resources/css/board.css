@@ -18,7 +18,7 @@ body{font-size: 16px;
     font-family: 'NotoSans Light','Malgun Gothic','¸¼Àº °íµñ','Apple SD Gothic Neo','µ¸¿ò',dotum, sans-serif;
 }
 /* body,input,textarea,select,button,table{font-family:'³ª´®°íµñ','NanumGothic',ng,'µ¸¿ò',Dotum,'Apple SD Gothic Neo',sans-serif;font-size:12px;color:#333} */
-fieldset,img,button{border:0 none;vertical-align:top}
+fieldset,button{border:0 none;vertical-align:top}
 table{border-top: 2px solid #4d4d4d;}
 address,caption{font-style:normal;font-weight:normal}
 em{font-style:normal}
@@ -32,3 +32,4 @@ input[type=text]::-ms-clear{display:none}
 input{-webkit-appearance:none;appearance:none}
 hr{border:1.2px solid black}
 
+img.gallery_list_img{ height:280px; width:300px;}

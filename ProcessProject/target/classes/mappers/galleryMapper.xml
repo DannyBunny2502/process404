@@ -59,6 +59,23 @@
 		set views=views+1
 		where gallery_code = #{gallery_code}
 	</update>
+	
+	<insert id="likeUp" parameterType="com.edu.domain.likeVO">
+		insert into LIKES (gallery_code, id, checks) 
+		values (#{gallery_code}, #{id}, 1)  
+	</insert>
+	
+	<delete id="likeDown" parameterType="String">
+		delete from LIKES
+		where id = #{id}
+	</delete>
+	
+	<select id="like" resultType="String">
+		select count(*) from likes where gallery_code=#{gallery_code}
+	</select>
 
+	<select id="likeCheck" parameterType="com.edu.domain.likeVO" resultType="String">
+		select * from likes where gallery_code=#{gallery_code} and id=#{id}	
+	</select>
 </mapper>
 

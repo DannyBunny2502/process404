@@ -32,7 +32,7 @@
 				<a href="#c" data-url="/contents/menu_intro.html"><span>게시판</span></a>			
 				<a href="/contents/menu_intro.html" class="main_link"></a>
               <ul class="sub">
-								<li><a href="/board/list">공지사항</a></li>
+								<li><a href="/board/getBoardList">공지사항</a></li>
 								<li><a href="/contents/bakery.html">자유게시판</a></li>
 								<li><a href="/gallery/list">갤러리</a></li>
               </ul>
@@ -48,7 +48,7 @@
 				<a href="#c" data-url="/document/uploadAjax/"><span>문서관리</span></a>			
 				<a href="/contents/coffee_lab.html" class="main_link"></a>
               <ul class="sub">
-					<li><a href="/document/upload">개인문서함</a></li>
+					<li><a href="/document/list">문서함</a></li>
               </ul>
             </li>
 			            <li>

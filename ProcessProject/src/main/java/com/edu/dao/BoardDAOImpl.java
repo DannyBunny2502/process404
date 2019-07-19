@@ -7,48 +7,68 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.edu.common.Search;
 import com.edu.domain.BoardVO;
+
+
 
 @Repository
 public class BoardDAOImpl implements BoardDAO {
 
+	
+
 	@Inject
-	private SqlSession sql;
+	private SqlSession sqlSession;
+
+
+	@Override
+
+	public List<BoardVO> getBoardList(Search search) throws Exception {
+		return sqlSession.selectList("com.edu.mappers.boardMapper.getBoardList", search);
+	}
+
+
+	@Override
+
+	public BoardVO getBoardContent(int bid) throws Exception {
+		return sqlSession.selectOne("com.edu.mappers.boardMapper.getBoardContent", bid);
+	}
+
+
+	@Override
+	public int insertBoard(BoardVO boardVO) throws Exception {
+		return sqlSession.insert("com.edu.mappers.boardMapper.insertBoard", boardVO);
+	}
+
+
+	@Override
+	public int updateBoard(BoardVO boardVO) throws Exception {
+		return sqlSession.update("com.edu.mappers.boardMapper.updateBoard", boardVO);
+	}
+
+
+
+	@Override
+	public int deleteBoard(int bid) throws Exception {
+		return sqlSession.insert("com.edu.mappers.boardMapper.deleteBoard", bid);
+	}
+
+
+	@Override
+	public int updateViewCnt(int bid) throws Exception {
+		return sqlSession.update("com.edu.mappers.boardMapper.updateViewCnt", bid);
+	}
 	
-	// namespace 조심하자
-	// namespace 조심하자
-	// namespace 조심하자
-	private static String namespace = "com.edu.mappers.boardMapper";
-	
-	// 게시물 작성
+	//페이징 : 총 게시글 개수 확인
+	//검색기능 :Search search
 	@Override
-	public void write(BoardVO vo) throws Exception {
-		sql.insert(namespace + ".write", vo);
-	}
+		public int getBoardListCnt(Search search) throws Exception {
+			return sqlSession.selectOne("com.edu.mappers.boardMapper.getBoardListCnt",search);
 
-	// 게시물 수정
-	@Override
-	public void update(BoardVO vo) throws Exception {
-		sql.update(namespace + ".update", vo);
-	}
+		}
 
-	// 게시물 삭제
-	@Override
-	public void delete(String notice_code) throws Exception {
-		System.out.println(namespace+".delete : "+notice_code);
-		sql.delete(namespace + ".delete", notice_code);
-	}
 
-	// 게시물 조회
-	@Override
-	public BoardVO view(String notice_code) throws Exception {
-		return sql.selectOne(namespace + ".view", notice_code);
-	}
 
-	// 게시물 목록
-	@Override
-	public List<BoardVO> list() throws Exception {
-		return sql.selectList(namespace + ".list");
-	}
 
 }
+

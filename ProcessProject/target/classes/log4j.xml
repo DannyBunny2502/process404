@@ -13,7 +13,7 @@
 	</appender>
 
 	<!-- Application Loggers -->
-	<logger name="com.edu.controller">
+	<logger name="com.juhee.web">
 		<level value="info" />
 	</logger>
 
@@ -36,16 +36,15 @@
 
 	<!-- 쿼리 로거 추가 -->
 	<!-- Query Loggers -->
-	<logger name="jdbc.sqlonly" additivity="false">
+	<!-- <logger name="jdbc.sqlonly" additivity="false">
 		<level value="INFO" />
 		<appender-ref ref="console-infolog" />
 	</logger>
 	<logger name="jdbc.resultsettable" additivity="false">
 		<level value="INFO" />
 		<appender-ref ref="console" />
-	</logger>
+	</logger> -->
 	<!-- 쿼리 로거 추가 -->
-
 
 
 	<!-- Root Logger -->
@@ -53,5 +52,40 @@
 		<priority value="warn" />
 		<appender-ref ref="console" />
 	</root>
+	
+	
+	<!-- ■■■■■■■■■■■■■■■■■■ SQL Logger 추가한 부분  ■■■■■■■■■■■■■■■■■■■ -->
+	
+	<logger name="jdbc.sqltiming" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="console"/> 
+	</logger>
+
+
+	<logger name="jdbc.sqlonly" additivity="false"> 
+		<level value="info"/> 
+		<appender-ref ref="console"/> 
+	</logger>
+	
+
+	<logger name="jdbc.audit" additivity="false"> 
+		<level value="warn"/>  
+		<appender-ref ref="console"/> 
+	</logger> 
+    
+
+	<logger name="jdbc.resultset" additivity="false">
+		<level value="warn" />
+		<appender-ref ref="console"/> 
+	</logger>
+
+
+	<logger name="jdbc.resultsettable" additivity="false"> 
+		<level value="info"/>  
+		<appender-ref ref="console"/> 
+	</logger> 
+
+
+
 
 </log4j:configuration>

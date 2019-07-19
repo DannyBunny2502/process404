@@ -60,10 +60,11 @@ public class MainController {
 		  
 	  }  
 	  
-	  List<BoardVO> list = null; 
-	  list = boardService.list();
-	  
-	  model.addAttribute("list", list);
+		/*
+		 * List<BoardVO> list = null; list = boardService.list();
+		 * 
+		 * model.addAttribute("list", list);
+		 */
 	  
 	  return mav; 
 	  }
@@ -90,8 +91,10 @@ public class MainController {
 	  
 
 	  
-	  List<BoardVO> list = null; list = boardService.list();
-	  model.addAttribute("list", list);
+		/*
+		 * List<BoardVO> list = null; list = boardService.list();
+		 * model.addAttribute("list", list);
+		 */
 	  
 	  return mav; 
 	  }

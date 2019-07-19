@@ -1,24 +1,32 @@
 package com.edu.dao;
 
+
 import java.util.List;
 
+import com.edu.common.Search;
 import com.edu.domain.BoardVO;
+
+
 
 public interface BoardDAO {
 
-	// 게시물 작성
-	public void write(BoardVO vo) throws Exception;
+	//검색기능 : Search search
+	public List<BoardVO> getBoardList(Search search) throws Exception;
 	
-	// 게시물 수정
-	public void update(BoardVO vo) throws Exception;
+	public BoardVO getBoardContent(int bid) throws Exception;
+
+	public int insertBoard(BoardVO boardVO) throws Exception;
+
+	public int updateBoard(BoardVO boardVO) throws Exception;
 	
-	// 게시물 삭제
-	public void delete(String notice_code) throws Exception;
+	public int deleteBoard(int bid) throws Exception;
+
+	public int updateViewCnt(int bid) throws Exception;
 	
-	// 게시물 조회
-	public BoardVO view(String notice_code) throws Exception;
-	
-	// 게시물 목록
-	public List<BoardVO> list() throws Exception;
+	//페이징 : 총 게시글 개수 확인
+	//검색기능: Search search
+	public int getBoardListCnt(Search search) throws Exception;
+
 
 }
+

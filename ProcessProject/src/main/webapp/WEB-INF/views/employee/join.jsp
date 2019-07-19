@@ -50,15 +50,12 @@
 		</div>
 		
 		<div>
-			<label>branch_name</label> <input type="text" name="branch_name" value="${join.branch_name}"  />
+			<label>branch_id</label> <input type="text" name="branch_name" value="${join.branch_id}"  />
 		</div>
 
-		<div>
-			<label>deparment_name</label> <input type="text" name="deparment_name" value="${join.deparment_name}"  />
-		</div>
 		
 		<div>
-			<label>deparment_id</label> <input type="text" name="deparment_id" value="${join.deparment_name}"  />
+			<label>deparment_id</label> <input type="text" name="deparment_id" value="${join.department_id}"  />
 		</div>
 		
 		

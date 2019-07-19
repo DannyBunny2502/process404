@@ -44,6 +44,7 @@
 		<thead>
 			<tr>
 				<th>번호</th>
+				<th>코드</th>
 				<th>작성자</th>
 				<th>제목</th>
 				<th>내용</th>
@@ -55,8 +56,11 @@
 		</thead>
 		<tbody>
 
-			<c:forEach items="${gallery}" var="gallery">
+			<c:forEach items="${gallery}" var="gallery" varStatus="status">
 				<tr>
+					<td>
+						${status.count }
+					</td>
 					<td>
 						<a href="/gallery/view?gallery_code=${gallery.gallery_code}">${gallery.gallery_code}</a>
 					</td>
@@ -69,7 +73,7 @@
 			
 					<td>${gallery.views}</td>
 					
-					<td><img src="/resources/image/gallery_img/${gallery.newPicture}"></td>
+					<td><img class="gallery_list_img" src="/resources/image/gallery_img/${gallery.newPicture}"></td>
 			
 					<td>${gallery.upload_date}</td>
 				

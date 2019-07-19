@@ -150,14 +150,14 @@
 <c:if test="${employee!=null}">
 	<div class="step01 login login_common_ly" id="login_after">
 	<a href="#">
-		<img src="${path}/resources/image/emp_img/${employee.getImg_root() }" width="110px" height="145px" style="border:1px solid lightgray; float:left">
+		<img src="${path}/resources/image/emp_img/${employee.getImg() }" width="110px" height="145px" style="border:1px solid lightgray; float:left">
 	</a>
 		<div class ="member_info_list" style="margin: 6px 0 0 128px;padding-bottom: 44px;">
 			<div class="info">
 				<p>${employee.getId()}</p> <br><br>
-				<p>${employee.getBranch_name()}</p>
+				<p>${employee.getBranch_id()}</p>
 				<p>${employee.getPosition()}</p>
-				<p>${employee.getdeparment_name()}</p>
+				<p>${employee.getDepartment_id()}</p>
 				
 			</div>
 		</div>
@@ -209,8 +209,8 @@
 				</div>
 
 				<div class="login_help lg_member_con" style="padding-top:10px;">
-					 <a href="/employee/codeCheck">아이디 찾기</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-					 <a href="/employee/codeCheck">비밀번호 찾기</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					 <a href="/employee/findId">아이디 찾기</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+					 <a href="/employee/findPassword">비밀번호 찾기</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 					 <a href="/employee/codeCheck">회원가입</a>
 				</div>
 				<div class="ly_lgtxt_capslock" id="CapslockInfo" style="display:none;"><img src="https://hangame-images.toastoven.net/hangame/renewal_2007/common/login/hidden.gif" alt="Caps Lock이 켜져있습니다."></div>
@@ -329,7 +329,7 @@
     });
 
     function changeTab(obj, categoryId, tabCount) {
-        $("#comicoCategoryUl.comic_tab li").each(function() {
+       /*  $("#comicoCategoryUl.comic_tab li").each(function() {
            if ($(this).hasClass("is_active")) {
                $(this).removeClass("is_active");
                $(this).find("span").remove();
@@ -340,11 +340,11 @@
         $(obj).append("<span class=\"blind\">선택됨</span>");
         $("#comicoBannerDiv.comic_box h3.blind").html($(obj).html());
 
-        changeBanner(tabCount);
+        changeBanner(tabCount); */
     }
 		
      function changeBanner(tabCount){
-  		var str="";
+  		/* var str="";
     	str+="<table>";
     	if(tabCount==1){
     			str+="<c:forEach items='${list}' var='list' begin='0' end='6' step='1'>"
@@ -372,7 +372,7 @@
  
     		str+="</table>";
     		
-    		document.getElementById("notice_table").innerHTML = str; 
+    		document.getElementById("notice_table").innerHTML = str;  */
     	}
 </script>
 

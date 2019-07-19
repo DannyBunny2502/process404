@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.edu.dao.GalleryDAO;
 import com.edu.domain.BoardVO;
 import com.edu.domain.GalleryVO;
+import com.edu.domain.likeVO;
 
 @Service
 public class GalleryServiceImpl implements GalleryService {
@@ -43,7 +44,28 @@ public class GalleryServiceImpl implements GalleryService {
 		public void viewCnt(GalleryVO vo) throws Exception {
 			// TODO Auto-generated method stub
 			dao.viewCnt(vo);
+		}
+
+		@Override
+		public void likeUp(likeVO vo) throws Exception {
+			// TODO Auto-generated method stub
+			dao.likeUp(vo);
+		}
+
+		@Override
+		public void likeDown(String id) throws Exception {
+			// TODO Auto-generated method stub
+			dao.likeDown(id);
 		}	
 	 
+		@Override
+		public String like(String gallery_code) throws Exception{
+			return dao.like(gallery_code);
+		}
 
+		@Override
+		public String likeCheck(likeVO vo) throws Exception {
+			// TODO Auto-generated method stub
+			return dao.likeCheck(vo);
+		}
 }

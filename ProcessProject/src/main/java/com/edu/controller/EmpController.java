@@ -71,7 +71,7 @@ public class EmpController {
 		String fileName=file.getOriginalFilename();
 		fileName=uploadFile(fileName,file.getBytes());
 		
-		dto.setImg_root(fileName);
+		dto.setImg(fileName);
 		service.infoUpdate(dto);
 		
 		return "redirect:/";
@@ -120,5 +120,70 @@ public class EmpController {
 		 
 		 ModelAndView mav = new ModelAndView("home");
 		 return "redirect:/";
+	 }
+	 
+	 
+	 @RequestMapping(value="/findId", method=RequestMethod.GET)
+	 public void findId () throws Exception {
+		
+		 System.out.println("findId");
+		 
+	
+	 }
+	
+	  @RequestMapping(value="/findId", method=RequestMethod.POST) 
+	  public ModelAndView findId (HttpServletRequest request, EmployeeDTO findDto) throws Exception { 
+		  EmployeeDTO dto = service.findId(findDto);
+		  System.out.println("findId : "+dto.getId());
+	  
+		  ModelAndView mav= new ModelAndView();
+		  
+		  mav.setViewName("/employee/findIdResult");
+		  mav.addObject("findId",dto);
+		  
+		  return mav;
+	  }
+	 
+	 
+	 @RequestMapping(value="/findPassword", method=RequestMethod.GET)
+	 public void findPasswordGet (HttpServletRequest request) throws Exception {
+	
+		 System.out.println("findPassword");
+	 }
+	 
+	 @RequestMapping(value="/findPassword", method=RequestMethod.POST)
+	 public ModelAndView findPasswordPost (HttpServletRequest request, EmployeeDTO findDto) throws Exception {
+	
+		 System.out.println("findPasswordPost");
+		 
+		  EmployeeDTO dto = service.findPassword(findDto);
+		  System.out.println("있습니다! : "+dto.getId());
+	  
+		  ModelAndView mav= new ModelAndView();
+		  
+		  mav.setViewName("/employee/findPasswordResult");
+		  mav.addObject("findPassword",dto);
+		  
+		  return mav;
+	 }
+	 
+	 @RequestMapping(value="/changePassword", method=RequestMethod.POST)
+	 public String findIdResultPost(HttpServletRequest request, EmployeeDTO dto) throws Exception {
+		System.out.println("changePassword");
+		
+		System.out.println(dto.getPassword());
+		System.out.println(dto.getId());
+		System.out.println(dto.getEmp_code());
+		
+		service.changePassword(dto);
+		
+		
+		return "redirect:/employee/changePassword";
+	 }
+	 
+	 @RequestMapping(value="/changePassword", method=RequestMethod.GET)
+	 public void findIdResultGet() throws Exception {
+		System.out.println("changePassword");
+	
 	 }
 }

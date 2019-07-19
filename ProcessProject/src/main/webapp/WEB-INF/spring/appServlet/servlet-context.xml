@@ -53,6 +53,10 @@
 	<beans:bean id="gallery_img" class="java.lang.String">
 		<beans:constructor-arg value="C:\workspace\ProcessProject\src\main\webapp\resources\image\gallery_img"></beans:constructor-arg>
 	</beans:bean>
+	
+	<beans:bean id="document_dir" class="java.lang.String">
+		<beans:constructor-arg value="C:\workspace\ProcessProject\src\main\webapp\resources\doc"></beans:constructor-arg>
+	</beans:bean>
 
 
  <mvc:interceptors>
