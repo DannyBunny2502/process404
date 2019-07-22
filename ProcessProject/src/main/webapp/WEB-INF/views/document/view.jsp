@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<!-- notice_code, author_id, author_password, title, content, gallerys, file_root, file_size, upload_date -->
+<!-- notice_code, author_id, author_password, title, content, documents, file_root, file_size, upload_date -->
 	
 	<form method="post">
 		<table class="table table-bordered table-striped nanum table-hover">
@@ -27,7 +27,7 @@
 				<th>content</th>
 				<th>views</th>
 				
-				<th>picture</th>
+				<th>file</th> 
 				<th>upload_date</th>
 				
 			</tr>
@@ -35,14 +35,14 @@
 		<tbody>
 				<tr>
 				
-					<td>${gallery.author_id}</td>
-					<td>${gallery.name_kor}</td>
-					<td>${gallery.title}</td>
-					<td>${gallery.content}</td>
-					<td>${gallery.views+1}</td>
+					<td>${document.author_id}</td>
+					<td>${document.name_kor}</td>
+					<td>${document.title}</td>
+					<td>${document.content}</td>
+					<td>${document.views+1}</td>
 			
-					<td><img src="/resources/image/gallery_img/${gallery.newPicture}"></td>
-					<td>${gallery.upload_date}</td>
+					<td><img src="/resources/doc/${document.newFile}"></td> 
+					<td>${document.upload_date}</td>
 				
 				</tr>
 			</tbody>
@@ -59,13 +59,13 @@
 		
 		<div>
 		<c:choose>
-		<c:when test="${gallery.author_id == employee.getId()}">
-			<a href="/gallery/update?gallery_code=${gallery.gallery_code}">수정</a><br />
-			<a href="/gallery/delete?gallery_code=${gallery.gallery_code}">삭제</a><br/>
-			<a href="/gallery/list">목록보기</a><br />
+		<c:when test="${document.author_id == employee.getId()}">
+			<a href="/document/update?document_code=${document.document_code}">수정</a><br />
+			<a href="/document/delete?document_code=${document.document_code}">삭제</a><br/>
+			<a href="/document/list">목록보기</a><br />
 		</c:when>
 		<c:otherwise>
-			<a href="/gallery/list">목록보기</a><br />
+			<a href="/document/list">목록보기</a><br />
 		</c:otherwise>
 		</c:choose>
 		</div>
@@ -82,11 +82,11 @@
 
 	 var likeData= {
 		     id: '${employee.getId()}',
-		     gallery_code : '${gallery.gallery_code}'
+		     document_code : '${document.document_code}'
 		 };
 	 
 	 $.ajax({
-		 url: "/gallery/thumbsView",
+		 url: "/document/thumbsView",
       method: "POST",
       type:"json",
       contentType:"application/json",
@@ -110,11 +110,11 @@
 
 	 var likeData= {
 		     id: '${employee.getId()}',
-		     gallery_code : '${gallery.gallery_code}'
+		     document_code : '${document.document_code}'
 		 };
 		 
 		$.ajax({
-		 url: "/gallery/thumbs",
+		 url: "/document/thumbs",
       method: "POST",
       type:"json",
       contentType:"application/json",

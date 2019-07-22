@@ -1,0 +1,24 @@
+
+[1] 생성할 파일목록
+- member.xml
+- MemberController.java
+- MemberDAOInter.java
+- MemberDAO.java
+- MemberVO.java
+- MemberMapperInter.java
+
+[2] DTO(VO) 생성 (MemberVO.java)
+- getter / setter
+
+[3] member.xml
+- mapper -> member.xml을 호출하는 인터페이스명 명시 
+
+[4] DAO Interface (MemberDAOInter.java)
+- interface 
+
+[5] DAO class (MemberDAO.java)
+@Repository("com.da.member.MemberDAO") -> class 등록 / DBMS관련 출력
+
+[6] MemberController (MemberCont.java)
+@Qualifier("com.da.prj.MemberDAO") : 해당 클래스에 이름 부여, 객체 할당
+@Autowired : 구현할 빈 연결

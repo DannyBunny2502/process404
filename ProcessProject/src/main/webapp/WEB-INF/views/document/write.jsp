@@ -36,12 +36,7 @@
         </div>
       </div>
       
-      <div class="form-group">
-          <label class="control-label col-sm-2">author_password</label>
-           <div class="col-sm-3">
-              <input type="password" class="form-control" name="author_password" maxlength="50" placeholder="Enter password">
-           </div>
-      </div>
+     <input type="text" value="${employee.getPosition()}" hidden="true">
       
       <div class="form-group">
         <label class="control-label col-sm-2">title</label>
@@ -59,9 +54,9 @@
 
       
        <div class="form-group">
-        <label class="control-label col-sm-2">picture</label>
+        <label class="control-label col-sm-2">file</label>
         <div class="col-sm-3">
-           <input type="file" class="form-control" name="file" id="img_file">
+           <input type="file" class="form-control" name="file" id="file">
         </div>
       </div>
       
@@ -90,18 +85,12 @@
 	var sel_file;
 
 	$(document).ready(function(){
-		$("#img_file").on("change", FileSelect);
+		$("#file").on("change", FileSelect);
 	});
 
 	function FileSelect(event){
 		var files=event.target.files;
 		var filesArr=Array.prototype.slice.call(files);
-
-		filesArr.forEach(function(f){
-			if(!f.type.match("image.*")){
-				alert("이미지만 올릴 수 있습니다.");
-				return; 
-			}
 			
 
 		sel_file=f;

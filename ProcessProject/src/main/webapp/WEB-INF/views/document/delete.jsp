@@ -15,10 +15,10 @@
 		<%-- <input type="hidden" name="emp_code" value="${view.emp_code}" /> --%>
 	
 		<div>
-			<label>gallery_code</label> <input type="text" name="gallery_code" value="${gallery.gallery_code}" />
+			<label>document_code</label> <input type="text" name="document_code" value="${document.document_code}" />
 		</div>
 		<div>
-			<label>fileName</label> <input type="text" name="newPicture" value="${gallery.newPicture}" />
+			<label>fileName</label> <input type="text" name="newPicture" value="${document.newFile}" />
 		</div>
 	<form method="post">	
 		<div>

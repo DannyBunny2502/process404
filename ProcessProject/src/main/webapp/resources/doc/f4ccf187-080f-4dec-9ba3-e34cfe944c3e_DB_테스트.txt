@@ -1,0 +1,54 @@
+
+https://keichee.tistory.com/65
+
+SUBSTRB
+LENGTHB
+
+SELECT  EMPLOYEE_ID,
+        FIRST_NAME || ' ' || LAST_NAME names,
+        DECODE(ROUND((SYSDATE - HIRE_DATE)/365),   5, '5년근속',
+        10, '10년근속',
+        15, '15년근속',
+        20, '20년근속',
+               ROUND((SYSDATE - HIRE_DATE)/365)) work_years
+FROM    EMPLOYEES
+ORDER BY EMPLOYEE_ID;
+
+
+
+SELECT  EMPLOYEE_ID,
+        ROUND((SYSDATE - HIRE_DATE)/365) w_years,
+        CASE ROUND((SYSDATE - HIRE_DATE)/365) WHEN 5 THEN '5년근속'
+          WHEN 10 THEN '10년근속'
+          WHEN 15 THEN '15년근속'
+          WHEN 20 THEN '20년근속'
+          ELSE to_char(ROUND((SYSDATE - HIRE_DATE)/365))
+        END work_years
+FROM    EMPLOYEES;
+
+
+
+https://gompangyi.tistory.com/122
+
+https://keichee.tistory.com/65
+
+언어세트 확인
+SQL> select * from sys.props$ where name='NLS_CHARACTERSET';
+
+언어세트 변경
+sqlplus /nolog
+conn /as sysdba;
+
+update sys.props$ set value$='UTF8' where name='NLS_CHARACTERSET';
+update sys.props$ set value$='UTF8' where name='NLS_NCHAR_CHARACTERSET';
+update sys.props$ set value$='KOREAN_KOREA.UTF8' where name='NLS_LANGUAGE';
+commit;
+shutdown immediate;
+startup mount;
+alter system enable restricted session;
+alter system set job_queue_processes=0;
+alter system set aq_tm_processes=0;
+alter database open;
+alter database character set UTF8;
+shutdown immediate;
+startup;

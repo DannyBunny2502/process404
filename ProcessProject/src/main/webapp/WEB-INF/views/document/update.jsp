@@ -14,21 +14,21 @@
 <body>
 
 		<div>
-			<label>gallery_code</label> <input type="text" name="gallery_code" value="${gallery.gallery_code}" disabled="disabled"/>
+			<label>document_code</label> <input type="text" name="document_code" value="${document.document_code}" disabled="disabled"/>
 		</div>
 	<form method="post" enctype="multipart/form-data">
 	
 
 		<div>
-			<label>author_id</label> <input type="text" name="author_id" value="${gallery.author_id}" readonly/>
+			<label>author_id</label> <input type="text" name="author_id" value="${document.author_id}" readonly/>
 		</div>
 			
 		<div>
-			<label>title</label> <input type="text" name="title" value="${gallery.title}"/>
+			<label>title</label> <input type="text" name="title" value="${document.title}"/>
 		</div>
 
 		<div>
-			<label>content</label> <input type="text" name="content" value="${gallery.content}" />
+			<label>content</label> <input type="text" name="content" value="${document.content}" />
 		</div>
 
 		<div>
@@ -61,12 +61,6 @@
 	function FileSelect(event){
 		var files=event.target.files;
 		var filesArr=Array.prototype.slice.call(files);
-
-		filesArr.forEach(function(f){
-			if(!f.type.match("image.*")){
-				alert("이미지만 올릴 수 있습니다.");
-				return; 
-			}
 			
 
 		sel_file=f;

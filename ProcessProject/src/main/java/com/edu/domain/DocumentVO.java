@@ -17,12 +17,27 @@ public class DocumentVO {
 	private String views;
 	private String folder;
 	private String size;
+	private String fileName;
+	private String type;
+	
 	
 	
 	// + name_kor
 	
 	
 	
+	public String getFileName() {
+		return fileName;
+	}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	public String getDocument_code() {
 		return document_code;
 	}

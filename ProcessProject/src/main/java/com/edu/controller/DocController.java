@@ -1,6 +1,7 @@
 package com.edu.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,9 +29,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.edu.domain.GalleryVO;
+import com.edu.domain.DocumentVO;
+import com.edu.domain.FolderVO;
 import com.edu.domain.likeVO;
-import com.edu.service.GalleryService;
+import com.edu.service.DocumentService;
 
 @Controller
 @RequestMapping("/document")
@@ -39,9 +41,9 @@ public class DocController {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
 	@Inject
-	GalleryService service;
+	DocumentService service;
 	
-	@Resource(name="gallery_img")
+	@Resource(name="document_dir")
 	// String uploadPath = "c:/document/upload"로 직접 정해도 된다.
 	String uploadPath; //공통사용
 
@@ -64,14 +66,14 @@ public class DocController {
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public void list(Model model) throws Exception {
 
-		logger.info("GalleryController list called.....");
+		logger.info("documentController list called.....");
 
-		List<GalleryVO> gallery = null;
+		List<DocumentVO> document = null;
 		logger.info("1");
-		gallery = service.list();
+		document = service.list();
 		logger.info("2");
 
-		model.addAttribute("gallery", gallery);
+		model.addAttribute("document", document);
 	}
 
 	// 게시물 작성
@@ -82,99 +84,105 @@ public class DocController {
 
 	// 게시물 작성
 	@RequestMapping(value = "/write", method = RequestMethod.POST)
-	public String postWrite(GalleryVO vo, MultipartFile file) throws Exception {
+	public String postWrite(DocumentVO vo, MultipartFile file) throws Exception {
 		System.out.println("postWrite() POST");
 		
-		String fileName=file.getOriginalFilename();
-		fileName=uploadFile(fileName,file.getBytes());
-		
-		vo.setNewPicture(fileName);
-		System.out.println("들어갔어?");
+		documentSet(vo, file);
 		service.upload(vo);
 		
 		System.out.println("여기?");
-		return "redirect:/gallery/list";
+		return "redirect:/document/list";
 	}
 
 	// 게시물 조회
 	@RequestMapping(value = "/view", method = RequestMethod.GET)
-	public void getView(@RequestParam("gallery_code") String gallery_code, Model model) throws Exception {
+	public void getView(@RequestParam("document_code") String document_code, Model model) throws Exception {
 
-		GalleryVO gallery = null;
+		DocumentVO document = null;
 		String likeCnt=null;
 		
-		gallery = service.view(gallery_code); 
+		document = service.view(document_code); 
 		
-		likeCnt= service.like(gallery_code);
-		 service.viewCnt(gallery);
+		likeCnt= service.like(document_code);
+		 service.viewCnt(document);
 	
 		/*
-		 * likeVO lvo = null; lvo.setGallery_code(gallery_code); lvo.setId(id);
+		 * likeVO lvo = null; lvo.setdocument_code(document_code); lvo.setId(id);
 		 * if(service.likeCheck(likeData)==null) { // 값이 없을 때
 		 */		 
 		 
-		model.addAttribute("gallery", gallery);
-		model.addAttribute("likeCnt",likeCnt);
+		model.addAttribute("document", document);
+		//model.addAttribute("likeCnt",likeCnt);
 	}
 
 	// 게시물 수정
 	
 	  @RequestMapping(value = "/update", method = RequestMethod.GET) 
-	  public void getUpdate(@RequestParam("gallery_code") String gallery_code, Model model) throws  Exception { 
+	  public void getUpdate(@RequestParam("document_code") String document_code, Model model) throws  Exception { 
 		  
 		  System.out.println("get");
 		  
-		  GalleryVO gallery = null; 
-		  gallery = service.view(gallery_code);
+		  DocumentVO document = null; 
+		  document = service.view(document_code);
 	  
-		  model.addAttribute("gallery", gallery); 
+		  model.addAttribute("document", document); 
 	  
 	  }
 	 
 
 	// 게시물 수정
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String postUpdate(GalleryVO vo, MultipartFile file) throws Exception {
+	public String postUpdate(DocumentVO vo, MultipartFile file) throws Exception {
 		  System.out.println("post");
 		
-		GalleryVO deleteVO = service.view(vo.getGallery_code());
+		DocumentVO deleteVO = service.view(vo.getDocument_code());
+		deleteFile(deleteVO.getNewFile());
 		
-		deleteFile(deleteVO.getNewPicture());
+		documentSet(vo, file);
 		
-		String fileName = file.getOriginalFilename();
-		fileName=uploadFile(fileName,file.getBytes());
-
-		vo.setNewPicture(fileName);
 		service.update(vo);
 		
-		return "redirect:/gallery/list";
+		return "redirect:/document/list";
 	}
 
 	// 게시물 삭제
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
-	public void getDelete(@RequestParam("gallery_code") String gallery_code, Model model) throws Exception {
-		GalleryVO gallery = null;
+	public void getDelete(@RequestParam("document_code") String document_code, Model model) throws Exception {
+		DocumentVO document = null;
 
-		gallery = service.view(gallery_code);
+		document = service.view(document_code);
 
-		model.addAttribute("gallery", gallery);
+		model.addAttribute("document", document);
 	}
 
 	// 게시물 삭제
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)
-	public String postDelete(GalleryVO vo) throws Exception {
+	public String postDelete(DocumentVO vo) throws Exception {
 		
-		GalleryVO deleteVO = service.view(vo.getGallery_code());//기존 파일 vo 담음
+		DocumentVO deleteVO = service.view(vo.getDocument_code());//기존 파일 vo 담음
 		
-		deleteFile(deleteVO.getNewPicture()); //기존에 있던 파일 삭제
+		deleteFile(deleteVO.getNewFile()); //기존에 있던 파일 삭제
 
-		service.view(vo.getGallery_code());
+		service.view(vo.getDocument_code());
 		
-		service.delete(vo.getGallery_code());
+		service.delete(vo.getDocument_code());
 
-		return "redirect:/gallery/list";
+		return "redirect:/document/list";
 	}
 	
+	
+	// 게시물 작성
+	@ResponseBody
+		@RequestMapping(value = "/makeFolder", method = RequestMethod.POST)
+		public void makeFolderPost(@RequestBody String folder) throws Exception {
+			System.out.println("makeFolder : "+folder);
+			
+			if(service.findFolder(folder).equals("0"))
+				service.makeFolder(folder);
+			else System.out.println("이미 있는 폴더임");
+		 
+		}
+		
 	// 1일 때 UP(+1), 0일 때 DOWN(-1)
 	@ResponseBody
 	@RequestMapping(value="/thumbs", method = RequestMethod.POST)
@@ -193,14 +201,16 @@ public class DocController {
 			
 		}
 		
-		System.out.println(likeData.getCheck());
-		System.out.println(likeData.getGallery_code());
-		System.out.println(likeData.getId());
-		
-		String likeCount= service.like(likeData.getGallery_code());
-		System.out.println(likeCount);
-		
-		likeData.setCheck(likeCount);
+		/*
+		 * System.out.println(likeData.getCheck());
+		 * System.out.println(likeData.getDocument_code());
+		 * System.out.println(likeData.getId());
+		 * 
+		 * String likeCount= service.like(likeData.getDocument_code());
+		 * System.out.println(likeCount);
+		 * 
+		 * likeData.setCheck(likeCount);
+		 */
 		
 		return likeData;
 	}
@@ -253,5 +263,25 @@ public class DocController {
 		}else
 			System.out.println("파일삭제실팽");
 	}
+	
+	void documentSet(DocumentVO vo, MultipartFile file) throws IOException, Exception {
+		System.out.println("dd");
+		String fileName=file.getOriginalFilename(); //파일이름(저장/삭제될 이름)
+		
+		fileName=uploadFile(fileName,file.getBytes()); //파일업로드
+		
+		String fileSize=Long.toString(file.getSize()); //파일크기
+		String realName=fileName.substring(37);
+		
+		// presentation.pptx일 때
+		int dotIndex=realName.indexOf("."); // .이 있는 index -> 12
+		String fileType=realName.substring(dotIndex+1); // .뒤부터 저장 -> pptx
+		
+		vo.setSize(fileSize);
+		vo.setNewFile(fileName);
+		vo.setType(fileType);
+		vo.setFileName(realName);
 
-} // End - public class galleryController
+	}
+
+} // End - public class documentController

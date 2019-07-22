@@ -4,96 +4,90 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.edu.mappers.documentMapper">
 
-
+<!-- title, content, author_id, position, newFile, oldFile, temp, size, views, upload_date, thumbs_up, folder -->
 	<!-- 게시물 작성 -->
-	<insert id="upload" parameterType="com.edu.domain.documentVO" useGeneratedKeys="true" keyProperty="id">
+	<insert id="upload" parameterType="com.edu.domain.DocumentVO" useGeneratedKeys="true" keyProperty="id">
 		insert into
-			gallery(author_id, title, content, newPicture, oldPicture, temp, views, upload_date, thumbs_up, thumbs_down)
-				values(#{author_id}, #{title}, #{content},#{newPicture},#{newPicture},#{newPicture}, 0, NOW(), 0, 0)
+			document(author_id, title, content, position, newFile, oldFile, temp, size, views, upload_date, thumbs_up, folder, type, fileName)
+				values(#{author_id}, #{title}, #{content}, #{position}, #{newFile},#{newFile},#{newFile}, #{size}, 0, NOW(), 0, null, #{type}, #{fileName})
 	</insert>
-	title, content, author_id, position, newFile, oldFile, 
-	temp, size, views, upload_date, thumbs_up, folder
+	
 	<!-- 게시물 수정 -->
-	<update id="update" parameterType="com.edu.domain.documentVO">
+	<update id="update" parameterType="com.edu.domain.DocumentVO">
 		update 
 			document
 				set
 					title = #{title},
 					content = #{content},
-					author_id = #{author_id},
-					position=#{position}
+					
 					newFile=#{newFile},
 					oldFile=temp,
 					temp = newFile,
+					
 					size=#{size},
-					views=#{views},
-					upload_date=#{upload_date},
-					thumbs_up,
-					folder=#{folder}
+					fileName=#{fileName},
+					type=#{type}
+					
 				where
 					document_code = #{document_code}
 	</update>
-	
-	<update id="moveFolder" parameterType="com.edu.domain.documentVO">
-		update 
-			document
-				set
-					folder=${folder}
-				where
-					document_code = #{document_code}
-	</update>
-	
-	<select id="findFolderName">
-		select count(*) from folder where folder =${folder}
-	</select>
-	
 	<!-- 게시물 삭제 -->
 	<delete id="delete" parameterType="String">
 		delete from
-			gallery
+			document
 				where 
-					gallery_code = #{gallery_code} 
+					document_code = #{document_code} 
 	</delete>
 	<!-- 게시물 조회 -->
-	<select id="view"  resultType="com.edu.domain.documentVO">
+	<select id="view"  resultType="com.edu.domain.DocumentVO">
 		select
-			gallery_code, author_id, title, content, views, newPicture, oldPicture, upload_date, emp.name_kor
+			document_code, author_id, title, content, views, newFile, upload_date, fileName, size, type, emp.name_kor
 		from 
-			gallery gal, employees emp
+			document doc, employees emp
 		where 
-			gallery_code = #{gallery_code} and gal.author_id=emp.id 
-		Order by gal.gallery_code desc limit 1
+			document_code = #{document_code} <!-- and doc.author_id=emp.id 
+		Order by doc.document_code desc limit 1 -->
 			
 	</select>
 	<!-- 게시물 목록 -->
-	<select id="list" resultType="com.edu.domain.documentVO">
+	<select id="list" resultType="com.edu.domain.DocumentVO">
 		select
 			*
 				from document
 	</select>
 
-	<update id="viewCnt" parameterType="com.edu.domain.documentVO">
-		update GALLERY
+	<update id="viewCnt" parameterType="com.edu.domain.DocumentVO">
+		update document
 		set views=views+1
-		where gallery_code = #{gallery_code}
+		where document_code = #{document_code}
 	</update>
 	
-	<insert id="likeUp" parameterType="com.edu.domain.likeVO">
-		insert into LIKES (gallery_code, id, checks) 
-		values (#{gallery_code}, #{id}, 1)  
+	 <insert id="likeUp" parameterType="com.edu.domain.likeVO">
+		insert into LIKES_doc (document_code, id, checks) 
+		values (#{document_code}, #{id}, 1)  
 	</insert>
 	
 	<delete id="likeDown" parameterType="String">
-		delete from LIKES
+		delete from LIKES_doc
 		where id = #{id}
-	</delete>
+	</delete> 
 	
 	<select id="like" resultType="String">
-		select count(*) from likes where gallery_code=#{gallery_code}
+		select count(*) from likes_doc where document_code=#{document_code}
 	</select>
 
 	<select id="likeCheck" parameterType="com.edu.domain.likeVO" resultType="String">
-		select * from likes where gallery_code=#{gallery_code} and id=#{id}	
+		select * from likes_doc where document_code=#{document_code} and id=#{id}	
+	</select>
+	
+	<insert id="makeFolder" parameterType="String">
+		insert into
+			folder(folder)
+				values(#{folder})
+	</insert>
+	
+	<select id="findFolder" resultType="String">
+		select count(*) from folder where folder=#{folder}
 	</select>
 </mapper>
 
