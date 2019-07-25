@@ -22,13 +22,8 @@
 					email = #{email},
 					phone_number = #{phone_number},
 					birth = #{birth},
-					<!-- org_code = #{org_code},
-					department_id = #{department_id},
+					org_code = #{org_code},
 					
-					branch_id = #{branch_id},
-				
-					position = #{position},
-					 -->
 					img = #{img}
 				where
 					emp_code = #{emp_code}

@@ -13,7 +13,8 @@
 </head>
 <body>
 
-${employee.id }
+${employee.getId()}
+${employee.getPosition()}
 	압?<br><br>
 	
 	<hr>
@@ -118,12 +119,12 @@ ${employee.id }
 		
 		<h2>정보수정</h2>
 
+		<div>
+			<label>emp_code</label> <input type="text" name="emp_code" value="${employee.emp_code}"  />
+		</div>		
 		
 		<form method="post" enctype="multipart/form-data">
-		
-		<div>
-			<label>emp_code</label> <input type="text" name="emp_code" value="${employee.emp_code} "  />
-		</div>
+
 		
 		<div>
 			<label>name_kor</label> <input type="text" name="name_kor" value="${employee.name_kor}"  />
@@ -174,14 +175,50 @@ ${employee.id }
 	
 		
 		 <div>
-			<label>img</label><img src="${path}/resources/image/emp_img/${employee.getImg() }" width="110px" height="145px" style="border:1px solid lightgray;">
-			<input type="file" name="file">
+			<label>img</label>
+			<div>
+	           <input type="file" class="form-control" name="file">
+	           <img id="img_file" src="${path}/resources/image/emp_img/${employee.getImg() }" width="110px" height="145px" style="border:1px solid lightgray;">
+	        </div>
+			
 		</div>
 		 
 		
 	 	<div class="form-group">
-    	   <button type="submit" class="btn btn-primary btn-sm">가입</button>
+    	   <button type="submit" class="btn btn-primary btn-sm">수정</button>
      	</div>
 	</form>
 </body>
+
+<script type="text/javascript">
+
+	var sel_file;
+
+	$(document).ready(function(){
+		$("#img_file").on("change", FileSelect);
+	});
+
+	function FileSelect(event){
+		var files=event.target.files;
+		var filesArr=Array.prototype.slice.call(files);
+
+		filesArr.forEach(function(f){
+			if(!f.type.match("image.*")){
+				alert("이미지만 올릴 수 있습니다.");
+				return; 
+			}
+			
+
+		sel_file=f;
+
+		var reader= new FileReader();
+		reader.onload=function(event){
+			$("#preview").attr("src",event.target.result);
+			}
+		reader.readAsDataURL(f);
+		});
+	}
+	
+</script>
+
 </html>

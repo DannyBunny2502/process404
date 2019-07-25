@@ -122,7 +122,15 @@ public class DocumentVO {
 	public void setSize(String size) {
 		this.size = size;
 	}
+	@Override
+	public String toString() {
+		return "DocumentVO [document_code=" + document_code + ", title=" + title + ", position=" + position
+				+ ", author_id=" + author_id + ", name_kor=" + name_kor + ", content=" + content + ", newFile="
+				+ newFile + ", oldFile=" + oldFile + ", temp=" + temp + ", upload_date=" + upload_date + ", views="
+				+ views + ", folder=" + folder + ", size=" + size + ", fileName=" + fileName + ", type=" + type
+				+ ", fileType=" + fileType + "]";
+	}
 	
-		
+	
 	
 }

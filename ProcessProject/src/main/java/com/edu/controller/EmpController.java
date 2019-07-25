@@ -197,7 +197,7 @@ public class EmpController {
 	 
 	 
 	 @RequestMapping(value="/mypage", method=RequestMethod.GET)
-	 public void mypageGet(Model model, HttpServletRequest request) throws Exception {
+	 public String mypageGet( Model model, HttpServletRequest request) throws Exception {
 		System.out.println("mypage");
 		
 		List<DocumentVO> document = docService.list();
@@ -209,6 +209,8 @@ public class EmpController {
 		model.addAttribute("document",document);
 		model.addAttribute("gallery",gallery);
 		model.addAttribute("employee",employee);
+		
+		return "redirect:/employee/mypage?emp_code="+emp_code;
 	 }
 	 
 	 @RequestMapping(value="/mypage", method=RequestMethod.POST)
@@ -219,6 +221,8 @@ public class EmpController {
 		fileName=uploadFile(fileName,file.getBytes());
 		
 		dto.setImg(fileName);
+		
+		System.out.println(dto.toString());
 		service.infoUpdate(dto);
 		
 		return "redirect:/employee/mypage";

@@ -116,6 +116,14 @@ public class EmployeeDTO {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	@Override
+	public String toString() {
+		return "EmployeeDTO [emp_code=" + emp_code + ", id=" + id + ", password=" + password + ", name_kor=" + name_kor
+				+ ", name_eng=" + name_eng + ", email=" + email + ", phone_number=" + phone_number + ", birth=" + birth
+				+ ", org_code=" + org_code + ", department_id=" + department_id + ", branch_id=" + branch_id
+				+ ", position=" + position + ", hire_date=" + hire_date + ", fire_date=" + fire_date + ", status="
+				+ status + ", img=" + img + "]";
+	}
 	
 	
 	

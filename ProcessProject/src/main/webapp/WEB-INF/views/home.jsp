@@ -129,7 +129,7 @@
        							<span class="logout" style="margin-top:3px; float:right;">
        								<c:if test="${employee!=null}">
        									<div class="login_help lg_member_con">
-										  <a href="employee/mypage/">마이페이지</a>&nbsp;|
+										  <a href="employee/mypage?emp_code=${employee.emp_code }">마이페이지</a>&nbsp;|
 										  <a href="employee/logout/">로그아웃</a>
 										
 										</div>
