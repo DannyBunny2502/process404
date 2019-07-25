@@ -26,8 +26,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.edu.domain.BoardVO;
+import com.edu.domain.DocumentVO;
 import com.edu.domain.EmployeeDTO;
+import com.edu.domain.GalleryVO;
+import com.edu.service.DocumentService;
 import com.edu.service.EmployeeService;
+import com.edu.service.GalleryService;
 
 @Controller
 @RequestMapping("/employee/")
@@ -39,6 +43,10 @@ public class EmpController {
 	//@Inject
 	@Autowired
 	EmployeeService service;
+	@Autowired
+	DocumentService docService;
+	@Autowired
+	GalleryService galService;
 	
 	@Autowired
 	BCryptPasswordEncoder passwordEncoder;
@@ -65,7 +73,7 @@ public class EmpController {
 
 	// 게시물 수정
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String postJoin(EmployeeDTO dto, MultipartFile file, ModelAndView mav) throws Exception {
+	public String postJoin(EmployeeDTO dto, MultipartFile file) throws Exception {
 		System.out.println("post");
 		
 		String fileName=file.getOriginalFilename();
@@ -185,5 +193,34 @@ public class EmpController {
 	 public void findIdResultGet() throws Exception {
 		System.out.println("changePassword");
 	
+	 }
+	 
+	 
+	 @RequestMapping(value="/mypage", method=RequestMethod.GET)
+	 public void mypageGet(Model model, HttpServletRequest request) throws Exception {
+		System.out.println("mypage");
+		
+		List<DocumentVO> document = docService.list();
+		List<GalleryVO> gallery = galService.list();
+		
+		String emp_code = request.getParameter("emp_code");
+		EmployeeDTO employee = service.join(emp_code);
+		
+		model.addAttribute("document",document);
+		model.addAttribute("gallery",gallery);
+		model.addAttribute("employee",employee);
+	 }
+	 
+	 @RequestMapping(value="/mypage", method=RequestMethod.POST)
+	 public String mypageGetPost(Model model, EmployeeDTO dto, MultipartFile file) throws Exception {
+		System.out.println("mypage");
+		
+		String fileName=file.getOriginalFilename();
+		fileName=uploadFile(fileName,file.getBytes());
+		
+		dto.setImg(fileName);
+		service.infoUpdate(dto);
+		
+		return "redirect:/employee/mypage";
 	 }
 }

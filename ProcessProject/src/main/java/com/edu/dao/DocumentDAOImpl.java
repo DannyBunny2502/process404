@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.edu.domain.DocumentVO;
 import com.edu.domain.FolderVO;
 import com.edu.domain.likeVO;
+import com.edu.domain.moveFolderVO;
 
 @Repository
 public class DocumentDAOImpl implements DocumentDAO {
@@ -92,6 +93,25 @@ public class DocumentDAOImpl implements DocumentDAO {
 	public String findFolder(String folder) throws Exception {
 		// TODO Auto-generated method stub
 		return sql.selectOne(namespace+".findFolder",folder);
+	}
+
+	@Override
+	public List<FolderVO> folderList() throws Exception {
+		// TODO Auto-generated method stub
+		return sql.selectList(namespace+".folderList");
+	}
+
+	@Override
+	public void moveFolder(moveFolderVO vo) throws Exception {
+		// TODO Auto-generated method stub
+		sql.update(namespace+".moveFolder", vo);
+	}
+
+	@Override
+	public void deleteFolder(String folder) throws Exception {
+		// TODO Auto-generated method stub
+		sql.delete(namespace+".deleteFolder", folder);
+		sql.update(namespace+".updateFolder", folder);
 	}
 
 }

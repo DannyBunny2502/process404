@@ -1,35 +1,88 @@
-@charset "euc-kr";
-
-/* @font-face {
-    font-family:ng;
-    font-weight:normal;
-    src:url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.eot);
-    src:url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.eot?#iefix) format('embedded-opentype'),
-        url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.woff) format('woff'),
-        url(https://hangame-images.toastoven.net/hangame/main2016/fonts/NanumGothic.ttf) format('truetype');
-} */
-
-/* reset */
-/* body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0} */
-html{overflow:auto}/* ÇÃ·ÎÆÃ ¹è³Ê °ü·Ã ·¹ÀÌ¾Æ¿ô */
-body{overflow:hidden;position:relative;min-width:1100px;background-color:#eef3f6;}/* ÇÃ·ÎÆÃ ¹è³Ê °ü·Ã ·¹ÀÌ¾Æ¿ô */
-body{font-size: 16px;
-    line-height: 1.5;
-    font-family: 'NotoSans Light','Malgun Gothic','¸¼Àº °íµñ','Apple SD Gothic Neo','µ¸¿ò',dotum, sans-serif;
+ .modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   /* Fallback color */
 }
-/* body,input,textarea,select,button,table{font-family:'³ª´®°íµñ','NanumGothic',ng,'µ¸¿ò',Dotum,'Apple SD Gothic Neo',sans-serif;font-size:12px;color:#333} */
-fieldset,button{border:0 none;vertical-align:top}
-table{border-top: 2px solid #4d4d4d;}
-address,caption{font-style:normal;font-weight:normal}
-em{font-style:normal}
-dl,ul,ol,li{list-style:none}
-a{color:#000;text-decoration:none;*cursor:pointer}
-button{overflow:visible;border:0;background:transparent;cursor:pointer;box-sizing:content-box}
-button::-moz-focus-inner{padding:0;border:0}
-input[type='text'],input[type='password']{border:0;background:transparent;vertical-align:top;outline:none}
-input[type='checkbox'],input[type='radio']{border:none;-webkit-appearance:none;appearance:none;background:transparent;vertical-align:top}
-input[type=text]::-ms-clear{display:none}
-input{-webkit-appearance:none;appearance:none}
-hr{border:1.2px solid black}
+    
+        /* Modal Content/Box */
+.modal-content {
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #fff;
+   width: 30%; /* Could be more or less, depending on screen size */                          
+   height: 25%;
+}
 
-img.gallery_list_img{ height:280px; width:300px;}
+.modal-content > select, .modal-content > input {
+	width:100%;	
+}
+
+<!-- ì—¬ê¸°ë¶€í„° -->
+   
+#board_background {
+    padding-left: 280px !important;
+    padding-top: 100px !important;
+    padding-right : 220px !important;
+    background-color: white !important;
+}
+
+#write_button {
+    padding-left: 40px;
+    border-color: black;
+    border: 1px solid;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 280px;
+    top: 150px;
+}
+
+.folder_name {
+    display: block;
+    
+    padding: 14px 0 15px 0;
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+    color: #F5876E;
+}
+
+hr {
+	margin-top:20px;
+	margin-bottom:20px;
+	border:0;
+	border-top:2px solid black
+}
+
+.folder {
+	float:right;
+	margin-top:4px
+}
+
+#td_center {
+	text-align:center;
+}
+
+#td_right {
+	text-align:right;
+}
+
+#keyword {
+	width:60%;
+}
+
+#searchType{
+	margin-left:40px;
+} 
+
+.modal_button {
+	text-align:center;
+	margin-top:20px;
+}

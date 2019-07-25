@@ -35,7 +35,7 @@
 <div class="board" style="padding:70px;">
 <Br>
 	<h2><b>갤러리</b></h2><br>
-	갤러리입니다. 예쁜 사진만 올려주세요.
+	갤러리입니다. 예쁜 사진만 올려주세요. ~~
 	<br><Br>
 	
 <br>
@@ -78,6 +78,8 @@
 					<td>${gallery.upload_date}</td>
 				
 				</tr>
+				
+				<tr><td></td></tr>
 			</c:forEach>
 
 		</tbody>

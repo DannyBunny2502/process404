@@ -5,6 +5,7 @@ import java.util.List;
 import com.edu.domain.DocumentVO;
 import com.edu.domain.FolderVO;
 import com.edu.domain.likeVO;
+import com.edu.domain.moveFolderVO;
 
 public interface DocumentService {
 
@@ -37,5 +38,11 @@ public interface DocumentService {
 	public void makeFolder(String folder) throws Exception;
 	
 	public String findFolder(String folder) throws Exception;
+
+	public List<FolderVO> folderList() throws Exception;
+
+	public void moveFolder(moveFolderVO vo) throws Exception;
+
+	public void deleteFolder(String folder) throws Exception;
 	
 }

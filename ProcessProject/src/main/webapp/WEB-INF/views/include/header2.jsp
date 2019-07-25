@@ -41,7 +41,7 @@
 				<a href="#c" data-url="/contents/members_intro.html"><span>일정관리</span></a>			
 				<a href="/contents/members_intro.html" class="main_link"></a>
               <ul class="sub">
-					<li><a href="/contents/ediya_members.html">개인일정</a></li>
+					<li><a href="/calendar/calendar">개인일정</a></li>
               </ul>
             </li>
 			            <li>
@@ -55,7 +55,7 @@
 				<a href="#c" data-url="/contents/music_festa.html"><span>주소록</span></a>			
 				<a href="/contents/music_festa.html" class="main_link"></a>
               <ul class="sub">
-					<li><a href="/contents/music_festa.html">사원검색</a></li>
+					<li><a href="/member/list">사원검색</a></li>
 					<li><a href="/contents/music_festa.html">지점검색</a></li>
               </ul>
             </li>

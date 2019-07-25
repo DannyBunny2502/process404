@@ -46,6 +46,20 @@
       </div>
       
       <div class="form-group">
+			<label class="control-label col-sm-2">folder</label>
+				 <div class="col-sm-3">
+					 <select name="folder">
+						<c:forEach items="${folderList}" var="folderList">
+						<option value="${folderList.folder}">
+							${folderList.folder}
+								</option>
+						</c:forEach>
+					</select>
+				</div>
+		</div>
+		
+		
+      <div class="form-group">
         <label class="control-label col-sm-2">content</label>
         <div class="col-sm-3">
         	<textarea rows="10" cols="100" name="content">Enter content</textarea>

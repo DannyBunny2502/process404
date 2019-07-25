@@ -10,6 +10,7 @@ import com.edu.dao.DocumentDAO;
 import com.edu.domain.DocumentVO;
 import com.edu.domain.FolderVO;
 import com.edu.domain.likeVO;
+import com.edu.domain.moveFolderVO;
 
 @Service
 public class DocumentServiceImpl implements DocumentService {
@@ -79,5 +80,23 @@ public class DocumentServiceImpl implements DocumentService {
 		public String findFolder(String folder) throws Exception {
 			// TODO Auto-generated method stub
 			return dao.findFolder(folder);
+		}
+
+		@Override
+		public List<FolderVO> folderList() throws Exception {
+			// TODO Auto-generated method stub
+			return dao.folderList();
+		}
+
+		@Override
+		public void moveFolder(moveFolderVO vo) throws Exception {
+			// TODO Auto-generated method stub
+			dao.moveFolder(vo);
+		}
+
+		@Override
+		public void deleteFolder(String folder) throws Exception {
+			// TODO Auto-generated method stub
+			dao.deleteFolder(folder);
 		}
 }

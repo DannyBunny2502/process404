@@ -19,13 +19,19 @@ public class DocumentVO {
 	private String size;
 	private String fileName;
 	private String type;
-	
+	private String fileType;
 	
 	
 	// + name_kor
 	
 	
 	
+	public String getFileType() {
+		return fileType;
+	}
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
 	public String getFileName() {
 		return fileName;
 	}

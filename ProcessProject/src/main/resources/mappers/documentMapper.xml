@@ -4,12 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.edu.mappers.documentMapper">
 
-<!-- title, content, author_id, position, newFile, oldFile, temp, size, views, upload_date, thumbs_up, folder -->
+<!-- title, content, author_id, position, newFile, oldFile, temp, size, views, upload_date, fileType, folder -->
 	<!-- 게시물 작성 -->
 	<insert id="upload" parameterType="com.edu.domain.DocumentVO" useGeneratedKeys="true" keyProperty="id">
 		insert into
-			document(author_id, title, content, position, newFile, oldFile, temp, size, views, upload_date, thumbs_up, folder, type, fileName)
-				values(#{author_id}, #{title}, #{content}, #{position}, #{newFile},#{newFile},#{newFile}, #{size}, 0, NOW(), 0, null, #{type}, #{fileName})
+			document(author_id, title, content, position, newFile, oldFile, temp, size, views, upload_date, fileType, folder, type, fileName)
+				values(#{author_id}, #{title}, #{content}, #{position}, #{newFile},#{newFile},#{newFile}, #{size}, 0, NOW(), #{fileType}, #{folder} , #{type}, #{fileName})
 	</insert>
 	
 	<!-- 게시물 수정 -->
@@ -26,7 +26,9 @@
 					
 					size=#{size},
 					fileName=#{fileName},
-					type=#{type}
+					type=#{type},
+					fileType=#{fileType},
+					folder=#{folder}
 					
 				where
 					document_code = #{document_code}
@@ -41,19 +43,19 @@
 	<!-- 게시물 조회 -->
 	<select id="view"  resultType="com.edu.domain.DocumentVO">
 		select
-			document_code, author_id, title, content, views, newFile, upload_date, fileName, size, type, emp.name_kor
+			document_code, author_id, title, content, views, newFile, upload_date, fileName,fileType, size, type, folder, emp.name_kor, emp.position
 		from 
 			document doc, employees emp
 		where 
-			document_code = #{document_code} <!-- and doc.author_id=emp.id 
-		Order by doc.document_code desc limit 1 -->
-			
+			document_code = #{document_code} and doc.author_id=emp.id 
+		limit 1			
 	</select>
 	<!-- 게시물 목록 -->
 	<select id="list" resultType="com.edu.domain.DocumentVO">
 		select
 			*
 				from document
+				
 	</select>
 
 	<update id="viewCnt" parameterType="com.edu.domain.DocumentVO">
@@ -61,24 +63,6 @@
 		set views=views+1
 		where document_code = #{document_code}
 	</update>
-	
-	 <insert id="likeUp" parameterType="com.edu.domain.likeVO">
-		insert into LIKES_doc (document_code, id, checks) 
-		values (#{document_code}, #{id}, 1)  
-	</insert>
-	
-	<delete id="likeDown" parameterType="String">
-		delete from LIKES_doc
-		where id = #{id}
-	</delete> 
-	
-	<select id="like" resultType="String">
-		select count(*) from likes_doc where document_code=#{document_code}
-	</select>
-
-	<select id="likeCheck" parameterType="com.edu.domain.likeVO" resultType="String">
-		select * from likes_doc where document_code=#{document_code} and id=#{id}	
-	</select>
 	
 	<insert id="makeFolder" parameterType="String">
 		insert into
@@ -89,5 +73,26 @@
 	<select id="findFolder" resultType="String">
 		select count(*) from folder where folder=#{folder}
 	</select>
+	
+	<select id="folderList" resultType="com.edu.domain.FolderVO">
+		select * from folder;
+	</select>
+	
+	<update id="moveFolder" parameterType="com.edu.domain.DocumentVO">
+		update document
+		set folder=#{folder}
+		where document_code = #{document_code}
+	</update>
+	
+	<delete id="deleteFolder" parameterType="String">
+		delete from folder where folder=#{folder}
+	</delete>
+	
+	<update id="updateFolder" parameterType="String">
+		update document
+		set folder='unknown'
+		where folder = #{folder}
+	</update>
+	
 </mapper>
 

@@ -41,7 +41,7 @@
 					<td>${document.content}</td>
 					<td>${document.views+1}</td>
 			
-					<td><img src="/resources/doc/${document.newFile}"></td> 
+					<td><a href="/document/download/${document.document_code }"><img src="/resources/doc/${document.newFile}"></a></td> 
 					<td>${document.upload_date}</td>
 				
 				</tr>
@@ -49,11 +49,6 @@
 		</table>
 		
 		<div>
-		
-		
-		<span id="thumbs_up_count"></span>
-		
-		<span id="like">${likeCnt }</span>
 			
 		</div>
 		
@@ -74,66 +69,4 @@
 
 
 
-
- <script  type="text/javascript">
-
- 
- $(document).ready(function(){
-
-	 var likeData= {
-		     id: '${employee.getId()}',
-		     document_code : '${document.document_code}'
-		 };
-	 
-	 $.ajax({
-		 url: "/document/thumbsView",
-      method: "POST",
-      type:"json",
-      contentType:"application/json",
-      data: JSON.stringify(likeData),
-      success: function (data) {
- 
-				 if(data==0){
-					$("#thumbs_up_count").html('');
-		       		 $("#thumbs_up_count").append("♡");
-				}else if(data==1){
-					$("#thumbs_up_count").html('');
-		       		 $("#thumbs_up_count").append("♥");
-				} 
-      		}
-		});
-		 
- 	});
-
-
- $("#thumbs_up_count").click(function(){
-
-	 var likeData= {
-		     id: '${employee.getId()}',
-		     document_code : '${document.document_code}'
-		 };
-		 
-		$.ajax({
-		 url: "/document/thumbs",
-      method: "POST",
-      type:"json",
-      contentType:"application/json",
-      data: JSON.stringify(likeData),
-      success: function (data) {
-         
-     		$("#like").html('');
-		        $("#like").append(data.check);
-
-				 if(data.heart==0){
-					$("#thumbs_up_count").html('');
-		       		 $("#thumbs_up_count").append("♥");
-				}else if(data.heart==1){
-					$("#thumbs_up_count").html('');
-		       		 $("#thumbs_up_count").append("♡");
-				} 
-     		 }
-		});
-	});
-
-</script> 
 </html>

@@ -30,7 +30,19 @@
 		<div>
 			<label>content</label> <input type="text" name="content" value="${document.content}" />
 		</div>
-
+		
+		<div>
+			<label>folder</label>
+			<select name="folder">
+				<c:forEach items="${folderList}" var="folderList">
+				<option value="${folderList.folder}" 
+					<c:if test="${document.folder == folderList.folder}"> selected </c:if>>
+					${folderList.folder}
+						</option>
+				</c:forEach>
+			</select>
+		</div>
+		
 		<div>
 			<label>newPicture</label> <input type="file" name="file" id="img_file"/>
 		</div>
